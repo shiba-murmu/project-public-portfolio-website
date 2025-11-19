@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { Routes, Route } from "react-router-dom";
+import Profile from './pages/profile/Profile.jsx';
 function Router_page() {
   return (
-    <div>Router_page</div>
+    <Routes>
+      <Route path="/" element={<Profile />} />
+    </Routes>
   )
 }
 
