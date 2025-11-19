@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Adjusted font weight  300 to 800*/
+  font-style: normal;
+  height: 100vh;
+  background-color : rgb(255, 255, 255);
+  overflow-y: scroll; /* Enable vertical scrolling */
+  /* background-image: url('/background3.jpg'); */
+}
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px; /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #256d9d, #96c7e7);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #155E8D, #256d9d);
+}
