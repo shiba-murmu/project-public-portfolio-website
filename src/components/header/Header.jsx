@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
     return (
         <>
-            <div className='flex justify-between bg-blue-600 items-center shadow-md'>
+            <div className='flex justify-between bg-(--bluish) items-center shadow-md'>
                 <div className='py-3 md:py-4 pl-3 md:pl-15 text-white text-2xl font-MomoSignature'>Shiba Murmu</div>
                 <div className='md:hidden py-3 pr-3 cursor-pointer'>
                     {/* size of this svg is 42 in google icons */}

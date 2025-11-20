@@ -52,6 +52,7 @@ body {
 
 
 :root {
-  --bg-color: rgb(255, 255, 255)
+  --bluish: #155dfc;
+  --bg-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
 }
