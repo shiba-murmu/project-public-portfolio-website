@@ -3,7 +3,7 @@ import React from 'react'
 function Profile() {
     return (
         <>
-            <div className='grid h-screen bg-(--bg-color)  grid-col-2 md:grid-cols-2 md:gap-5 justify-center items-center p-10'>
+            <div className='grid h-screen bg-(--bg-color)  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center p-10'>
                 <div className='flex md:order-2 flex-col items-center '>
                     <div>
                         <img src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" alt="profile" className='rounded-full 
@@ -24,7 +24,7 @@ function Profile() {
                         </div>
                     </div>
                 </div>
-                <div className='md:order-1 flex md:pl-20 flex-col  justify-left items-left md:gap-4'>
+                <div className='md:order-1 flex md:pl-20 flex-col  justify-left items-start md:gap-4'>
                     <div>
                         {/* For desktop screen */}
                         <div className='hidden md:block text-5xl regular-bolder font-extrabold'>
@@ -35,7 +35,7 @@ function Profile() {
                         <h3 className='hidden md:block text-2xl text-neutral-500 '>Frontend Developer</h3>
                     </div>
                     <div>
-                        <p className='text-md md:text-lg text-justify md:text-left max-w-xl'>
+                        <p className='text-md md:text-lg text-center md:text-left max-w-xl'>
                             I build clean, fast, and accessible web experiences using React and Tailwind, Currently open to freelance and full-time opportunities. Let's connect!
                         </p>
                     </div>
