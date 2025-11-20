@@ -3,7 +3,7 @@ import React from 'react'
 function Profile() {
     return (
         <>
-            <div className='grid h-screen bg-(--bg-color) items-center mt-10 md:mt-0  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center md:p-10 '>
+            <div id='Home' className='grid h-screen bg-(--bg-color) items-center mt-10 md:mt-0  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center md:p-10 '>
                 <div className='flex md:order-2 flex-col items-center '>
                     <div>
                         <img src="https://png.pngtree.com/png-vector/20230903/ourmid/pngtree-3d-illustration-avatar-profile-man-png-image_9945226.png" alt="profile" className='rounded-md
