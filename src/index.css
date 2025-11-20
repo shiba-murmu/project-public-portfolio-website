@@ -31,7 +31,6 @@ body {
   font-style: normal;
 }
 
-
 /* For Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 10px; /* scrollbar width */
@@ -50,9 +49,12 @@ body {
   background: linear-gradient(180deg, #155e8d, #256d9d);
 }
 
-
 :root {
+  /* ***************************** */
   --bluish: #155dfc;
+  /* this variable is used for the bluish color gradient like buttons background color */
+  --bluish-text: white;
+  /******************************** */
   --bg-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
 }
