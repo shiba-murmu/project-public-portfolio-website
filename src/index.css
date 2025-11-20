@@ -1,12 +1,15 @@
 @import "tailwindcss";
+/* 
 
+This file is used for global css here
+
+*/
 body {
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500; /* Adjusted font weight  300 to 800*/
   font-style: normal;
   height: 100vh;
-  background-color: rgb(255, 255, 255);
   overflow-y: scroll; /* Enable vertical scrolling */
   /* background-image: url('/background3.jpg'); */
 }
@@ -33,3 +36,22 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #155e8d, #256d9d);
 }
+
+
+/* fallback vars so initial paint isn't ugly */
+:root{
+  --bg: #0d3b59;
+  --card: #e6f6ff;
+  --text: #031633;
+  --accent: #0ea5e9;
+  --muted: #075985;
+}
+
+/* small utility classes you can use if you prefer class names instead of arbitrary utilities */
+.bg-theme { background-color: var(--bg); }
+.text-theme { color: var(--text); }
+.card-theme { background-color: var(--card); }
+.accent { background-color: var(--accent); color: white; }
+
+/* small handy transition */
+* { transition: color .18s, background-color .18s; }
