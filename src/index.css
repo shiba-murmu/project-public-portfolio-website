@@ -38,20 +38,3 @@ body {
 }
 
 
-/* fallback vars so initial paint isn't ugly */
-:root{
-  --bg: #0d3b59;
-  --card: #e6f6ff;
-  --text: #031633;
-  --accent: #0ea5e9;
-  --muted: #075985;
-}
-
-/* small utility classes you can use if you prefer class names instead of arbitrary utilities */
-.bg-theme { background-color: var(--bg); }
-.text-theme { color: var(--text); }
-.card-theme { background-color: var(--card); }
-.accent { background-color: var(--accent); color: white; }
-
-/* small handy transition */
-* { transition: color .18s, background-color .18s; }
