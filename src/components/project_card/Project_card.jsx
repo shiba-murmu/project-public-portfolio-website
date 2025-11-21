@@ -32,10 +32,10 @@ function Project_card() {
                     {/* FOOTER BUTTONS */}
                     <div className=' flex justify-center items-center space-x-4 mt-auto pt-3 pb-3 rounded-md'>
                         <Link to='/project-details'>
-                            <button className='bg-(--bluish) text-white px-4 py-2 rounded-md'>Details</button>
+                            <button className='bg-(--bluish) w-20 text-white px-4 py-2 flex justify-center items-center rounded-md'>Details</button>
                         </Link>
-                        <button className='bg-(--bluish) text-white px-4 py-2 rounded-md'>Code</button>
-                        <button className='bg-(--bluish) text-white px-4 py-2 rounded-md'>Live</button>
+                        <button className='bg-(--bluish) w-20 text-white px-4 py-2 rounded-md'>Code</button>
+                        <button className='bg-(--bluish) w-20 text-white px-4 py-2 rounded-md'>Live</button>
                     </div>
                 </div>
 

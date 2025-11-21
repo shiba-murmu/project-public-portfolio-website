@@ -27,10 +27,10 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                     </div>
                     <div className=' flex px-30 justify-center items-center space-x-4 mt-auto pt-3 pb-3 rounded-md'>
                         <Link to='/project-details'>
-                            <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 rounded-md'>Details</button>
+                            <button className='cursor-pointer w-30 bg-(--bluish) text-white px-4 py-2 rounded-md'>Details</button>
                         </Link>
-                        <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 rounded-md'>Code</button>
-                        <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 rounded-md'>Live</button>
+                        <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 w-30 rounded-md'>Code</button>
+                        <button className='cursor-pointer w-30 bg-(--bluish) text-white px-4 py-2 rounded-md'>Live</button>
                     </div>
                 </div>
             </div>

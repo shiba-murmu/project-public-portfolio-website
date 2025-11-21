@@ -18,6 +18,8 @@ function Project_collection() {
             {/* Designed for desktop screen */}
             <Project_card_desktop orderOne={1} orderTwo={2} path='https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322'/>
             <Project_card_desktop orderOne={2} orderTwo={1} path='https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322' />
+            <Project_card_desktop orderOne={1} orderTwo={2} path='https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322' />
+            <Project_card_desktop orderOne={2} orderTwo={1} path='https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322' />
         </div>
     </div>
    </>
