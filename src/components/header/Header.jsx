@@ -23,6 +23,7 @@ function Header() {
                 <div className='hidden md:flex text-white space-x-8 p-4 text-lg'>
                     <div onClick={() => ScrollToSection('Home')} className='cursor-pointer'>Home</div>
                     <div onClick={() => ScrollToSection('About')} className='cursor-pointer'>About</div>
+                    <div onClick={() => ScrollToSection('project')} className='cursor-pointer'>Projects</div>
                     <div onClick={() => ScrollToSection('Contact')} className='cursor-pointer'>Contact</div>
                 </div>
             </div>

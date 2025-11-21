@@ -5,12 +5,31 @@ import Heading_text from '../../components/Heading_text/Heading_text'
 function Project() {
     return (
         <>
-            <div id='project' className='min-h-screen md:pt-20  bg-(--about-bg) md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
+            <div id='project' className='min-h-screen pt-10 md:pt-20  bg-amber-800 flex flex-col justify-start md:justify-start items-center md:items-start text-3xl font-semibold'>
                 <div >
-                    <Heading_text text='My works' />
+                    <Heading_text text='My work' />
                 </div>
                 <div>
                     {/* Projects cards here */}
+                    <div className='grid grid-cols-1 bg-amber-500 md:grid-cols-5 gap-4'>
+                        {/* Map through your projects and create a card for each */}
+                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
+                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
+                            <p className='text-sm'>Brief description of the project.</p>
+                        </div>
+                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
+                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
+                            <p className='text-sm'>Brief description of the project.</p>
+                        </div>
+                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
+                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
+                            <p className='text-sm'>Brief description of the project.</p>
+                        </div>
+                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
+                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
+                            <p className='text-sm'>Brief description of the project.</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     {/* More content if needed */}
