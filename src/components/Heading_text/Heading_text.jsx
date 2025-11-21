@@ -4,7 +4,7 @@ function Heading_text({ text }) {
     return (
         <>
             <div className=''>
-                <span className='text-3xl md:text-4xl font-extrabold'>
+                <span className='text-3xl md:text-5xl font-extrabold'>
                     {text}
                 </span>
             </div>
