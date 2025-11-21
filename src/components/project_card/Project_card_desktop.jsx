@@ -10,7 +10,7 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                         alt="" />
                 </div>
                 <div className={`flex order-${orderTwo} justify-center items-start flex-col`}>
-                    <div className='border-b-2 border-(--bluish) py-2 px-20'>
+                    <div className='border-b  shadow-md mb-3 rounded-4xl border-(--bluish) py-2 px-20'>
                         <span className='text-3xl font-bold text-(--bluish)'>Hotel management</span>
                     </div>
                     <div>
@@ -25,9 +25,9 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                         <span className='font-extrabold text-xl'>Description : </span>
                         <p className='text-gray-500 text-lg pl-5'>Project description goes here</p>
                     </div>
-                    <div className='cursor-pointer flex px-30 justify-center items-center space-x-4 mt-auto pt-3 pb-3 rounded-md'>
+                    <div className=' flex px-30 justify-center items-center space-x-4 mt-auto pt-3 pb-3 rounded-md'>
                         <Link to='/project-details'>
-                            <button className='bg-(--bluish) text-white px-4 py-2 rounded-md'>Details</button>
+                            <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 rounded-md'>Details</button>
                         </Link>
                         <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 rounded-md'>Code</button>
                         <button className='cursor-pointer bg-(--bluish) text-white px-4 py-2 rounded-md'>Live</button>
