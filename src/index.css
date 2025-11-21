@@ -13,6 +13,7 @@ body {
   overflow-y: scroll; /* Enable vertical scrolling */
   /* background-image: url('/background3.jpg'); */
 }
+
 .heading-text {
   font-family: "Momo Signature", cursive;
   font-weight: 800;
@@ -51,10 +52,12 @@ body {
 
 :root {
   /* ***************************** */
-  --bluish: #155dfc;
+  --bluish: #0034c2;
   /* this variable is used for the bluish color gradient like buttons background color */
   --bluish-text: white;
   /******************************** */
   --bg-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
 }
+
+

@@ -24,7 +24,7 @@ function Profile() {
                         </div>
                     </div>
                 </div>
-                <div className='md:order-1  h-96 flex md:pl-20 md:flex-col  md:justify-left  md:gap-4'>
+                <div className='md:order-1  h-96 flex flex-col md:pl-20 md:flex-col  md:justify-left  md:gap-4'>
                     <div>
                         {/* For desktop screen */}
                         <div className='hidden md:block text-5xl regular-bolder font-extrabold'>
@@ -36,7 +36,7 @@ function Profile() {
                         <h3 className='hidden md:block text-2xl text-neutral-500 '>Frontend Developer</h3>
                     </div>
                     <div>
-                        <p className='text-md md:text-lg text-center md:text-left max-w-xl'>
+                        <p className='text-md mt-10 md:mt-0 px-5 md:px-0 md:text-lg text-center md:text-left max-w-xl'>
                             I build clean, fast, and accessible web experiences using React and Tailwind, Currently open to freelance and full-time opportunities. Let's connect!
                         </p>
                     </div>
@@ -58,6 +58,11 @@ function Profile() {
                             <span className='bg-(--bluish) text-(--bluish-text) px-3 py-1 rounded-full text-sm'>Tailwind</span>
                         </div>
                     </div>
+                    <div className='mt-20 md:hidden flex flex-wrap gap-3 justify-center md:block'>
+                        {/* not visible to mobile */}
+                        <h4 className='bg-(--bluish) text-md text-white px-5 py-3 rounded-md cursor-pointer'>Download Resume</h4>
+                    </div>
+                    
                 </div>
             </div>
         </>
@@ -65,3 +70,10 @@ function Profile() {
 }
 
 export default Profile
+
+{/* <div className='hidden md:flex gap-5 mt-10'>
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="twitter" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
+                        </div> */}
