@@ -58,11 +58,18 @@ function Profile() {
                             <span className='bg-(--bluish) text-(--bluish-text) px-3 py-1 rounded-full text-sm'>Tailwind</span>
                         </div>
                     </div>
-                    <div className='mt-20 md:hidden flex flex-wrap gap-3 justify-center md:block'>
+                    <div className='mt-20 md:mt-10  flex flex-wrap md:justify-start gap-3 justify-center '>
                         {/* not visible to mobile */}
-                        <h4 className='bg-(--bluish) text-md text-white px-5 py-3 rounded-md cursor-pointer'>Download Resume</h4>
+                        <h4 className="bg-(--bluish) text-md text-white px-5 py-3 rounded-md cursor-pointer 
+               flex items-center gap-2">
+                            Resume
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                                <path d="M160-80v-80h640v80H160Zm320-160L200-600h160v-280h240v280h160L480-240Zm0-130 116-150h-76v-280h-80v280h-76l116 150Zm0-150Z" />
+                            </svg>
+                        </h4>
+
                     </div>
-                    
+
                 </div>
             </div>
         </>
