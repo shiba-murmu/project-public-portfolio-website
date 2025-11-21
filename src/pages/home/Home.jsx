@@ -10,6 +10,7 @@ function Home() {
                 <Profile />
                 <About />
                 <Project />
+                {/* Here skills component will be adding here. */}
                 <Contact />
             </div>
         </>
