@@ -5,35 +5,14 @@ import Heading_text from '../../components/Heading_text/Heading_text'
 function Project() {
     return (
         <>
-            <div id='project' className='min-h-screen pt-10 md:pt-20  bg-amber-800 flex flex-col justify-start md:justify-start items-center md:items-start text-3xl font-semibold'>
-                <div >
+            <div id='project' className='min-h-screen pt-20 bg-(--about-bg) flex justify-center items-start text-4xl font-bold text-(--text-primary)'>
+                <div className='w-full  md:w-full flex justify-center gap-4 items-center p-4 rounded-md'>
                     <Heading_text text='My work' />
+
+                    <svg xmlns="http://www.w3.org/2000/svg" className='md:h-10 md:w-10' height="30px" viewBox="0 -960 960 960" width="30px" strokeWidth="30" fill='var(--bluish)'><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z" /></svg>
                 </div>
-                <div>
-                    {/* Projects cards here */}
-                    <div className='grid grid-cols-1 bg-amber-500 md:grid-cols-5 gap-4'>
-                        {/* Map through your projects and create a card for each */}
-                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
-                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
-                            <p className='text-sm'>Brief description of the project.</p>
-                        </div>
-                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
-                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
-                            <p className='text-sm'>Brief description of the project.</p>
-                        </div>
-                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
-                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
-                            <p className='text-sm'>Brief description of the project.</p>
-                        </div>
-                        <div className='bg-white p-4 rounded-lg shadow-md w-full h-48'>
-                            <h3 className='text-xl font-bold mb-2'>Project Title</h3>
-                            <p className='text-sm'>Brief description of the project.</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    {/* More content if needed */}
-                </div>
+
+
             </div>
         </>
     )
