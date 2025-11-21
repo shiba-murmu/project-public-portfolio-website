@@ -13,6 +13,7 @@ function Router_page() {
     return (
         <>
             {!shouldHideNavbar && <Header />}
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 {/* <Route path="/profile" element={<Profile />} /> */}
@@ -24,3 +25,11 @@ function Router_page() {
 }
 
 export default Router_page
+
+function ScrollToTop() {
+    const location = useLocation();
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+    return null;
+}
