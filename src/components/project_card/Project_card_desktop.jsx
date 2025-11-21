@@ -4,12 +4,12 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
     return (
         <>
             <div className='grid grid-cols-2 w-full gap-50  h-96'>
-                <div className={`flex order-${orderOne}  justify-center items-center `}>
+                <div style={{order : orderOne}} className='flex order-${orderOne}  justify-center items-center'>
                     <img src={path}
                         className=' object-contain h-full w-full'
                         alt="" />
                 </div>
-                <div className={`flex order-${orderTwo} justify-center items-start flex-col`}>
+                <div style={{order : orderTwo}} className='flex order-${orderTwo} justify-center items-start flex-col'>
                     <div className='border-b  shadow-md mb-3 rounded-4xl border-(--bluish) py-2 px-20'>
                         <span className='text-3xl font-bold text-(--bluish)'>Hotel management</span>
                     </div>
