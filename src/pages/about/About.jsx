@@ -3,7 +3,7 @@ import Heading_text from '../../components/Heading_text/Heading_text'
 function About() {
     return (
         <>
-            <div id='About' className='min-h-screen pt-40 rounded-t-full bg-[#fcf5ef] md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
+            <div id='About' className='min-h-screen pt-40 rounded-t-full bg-(--about-bg) md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
                 <div className=''>
                     <Heading_text text='About me' />
                 </div>
@@ -32,7 +32,7 @@ function About() {
 
                             <div className="mt-6 flex flex-col gap-2 justify-center items-center md:justify-start md:items-start md:mt-0 md:w-full">
                                 <h4 className="font-extrabold text-md md:text-3xl mb-2">Quick Facts</h4>
-                                <ol className=" text-center md:text-start list-inside space-y-1 text-sm md:text-lg" style={{ color: 'var(--muted)' }}>
+                                <ol className=" text-center md:text-start list-inside space-y-1 text-sm md:text-lg">
                                     <li>B.Tech in Computer Science</li>
                                     <li>2+ years of experience</li>
                                     <li>Passionate about UI/UX design</li>

@@ -1,16 +1,22 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Profile from './pages/profile/Profile.jsx';
 import Header from './components/header/Header.jsx';
 import Footer from './components/footer/Footer.jsx';
 import Home from './pages/home/Home'
+import Project_collection from './pages/projects/Project_list.jsx/Project_collection.jsx';
 function Router_page() {
+    const location = useLocation();
+    const hideNavbarRoutes = ['project-collections'];
+
+    const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
     return (
         <>
-            <Header />
+            {!shouldHideNavbar && <Header />}
             <Routes>
                 <Route path="/" element={<Home />} />
                 {/* <Route path="/profile" element={<Profile />} /> */}
+                <Route path='project-collections' element={<Project_collection />} />
             </Routes>
             <Footer />
         </>
