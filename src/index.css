@@ -52,9 +52,12 @@ body {
 
 :root {
   /* ***************************** */
-  --bluish: #0034c2;
+  --bluish: #4973de;
   /* this variable is used for the bluish color gradient like buttons background color */
   --bluish-text: white;
+
+  --about-bg: #fcf5ef;
+    --muted: #6c757d;
   /******************************** */
   --bg-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);

@@ -3,10 +3,11 @@ import Heading_text from '../../components/Heading_text/Heading_text'
 function About() {
     return (
         <>
-            <div id='About' className='min-h-screen md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
+            <div id='About' className='min-h-screen pt-40 rounded-t-full bg-[#fcf5ef] md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
                 <div className=''>
                     <Heading_text text='About me' />
                 </div>
+                
                 <div>
                     <section id="about" className="p-6 rounded-2xl" style={{ background: '' }}>
                         <div className="mt-3 md:flex md:flex-col md:gap-6">
