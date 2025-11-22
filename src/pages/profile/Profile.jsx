@@ -16,10 +16,10 @@ function Profile() {
                         <h3 className='text-lg '>Frontend Developer</h3>
                     </div>
                     <div className='md:hidden flex gap-5 mt-4 font-semibold'>
-                        <div className='cursor-pointer  px-4 py-2 rounded-md transition duration-300'>
+                        <div className='cursor-pointer bg-(--button-background)  px-4 py-2 rounded-md transition duration-300'>
                             View work
                         </div>
-                        <div className='cursor-pointer  border px-4 py-2 rounded-md  transition duration-300'>
+                        <div className='cursor-pointer  border px-4 py-2 rounded-md border-(--border-color)  transition duration-300'>
                             Contact
                         </div>
                     </div>
@@ -42,26 +42,26 @@ function Profile() {
                     </div>
                     <div className='hidden md:flex gap-5 mt-4  font-semibold'>
                         {/* not visible to mobile */}
-                        <div className='cursor-pointer  px-4 py-2 rounded-md transition duration-300'>
+                        <div className='cursor-pointer  px-4 py-2 rounded-md transition bg-(--button-background) duration-300'>
                             View work
                         </div>
-                        <div className='cursor-pointer  border border-gray-500 px-4 py-2 rounded-md hover:shadow-md  transition duration-300'>
+                        <div className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--border-color) transition duration-300'>
                             Contact
                         </div>
                     </div>
                     <div className='mt-5 hidden md:block'>
                         {/* not visible to mobile */}
                         <div className='flex flex-wrap gap-3'>
-                            <span className=' px-3 py-1 rounded-full text-sm'>Python</span>
-                            <span className=' px-3 py-1 rounded-full text-sm'>JavaScript</span>
-                            <span className=' px-3 py-1 rounded-full text-sm'>React</span>
-                            <span className=' px-3 py-1 rounded-full text-sm'>Tailwind</span>
+                            <span className=' bg-(--button-background) px-3 py-1 rounded-full text-sm'>Python</span>
+                            <span className='bg-(--button-background) px-3 py-1 rounded-full text-sm'>JavaScript</span>
+                            <span className='bg-(--button-background) px-3 py-1 rounded-full text-sm'>React</span>
+                            <span className='bg-(--button-background) px-3 py-1 rounded-full text-sm'>Tailwind</span>
                         </div>
                     </div>
                     <div className='mt-20 md:mt-10  flex flex-wrap md:justify-start gap-3 justify-center '>
                         {/* not visible to mobile */}
                         <h4 className=" text-md px-5 py-3 rounded-md cursor-pointer 
-               flex items-center gap-2">
+               flex items-center bg-(--button-background) gap-2">
                             Resume
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
                                 <path d="M160-80v-80h640v80H160Zm320-160L200-600h160v-280h240v280h160L480-240Zm0-130 116-150h-76v-280h-80v280h-76l116 150Zm0-150Z" />

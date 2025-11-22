@@ -7,6 +7,10 @@ This file is used for global css here
 
 :root {
     --bg-color : #08080a;
+    --text-color : #aeaac0;
+    --button-background : #815ed7;
+    --border-color : #35373d;
+    --muted-text : #59626f;
 }
 
 body {
@@ -15,7 +19,8 @@ body {
   font-weight: 500; /* Adjusted font weight  300 to 800*/
   font-style: normal;
   height: 100vh;
-  /* background-color: '#08080a'; */
+  background-color: var(--bg-color);
+  color : var(--text-color);
   overflow-y: scroll; /* Enable vertical scrolling */
   /* background-image: url('/background3.jpg'); */
 }
