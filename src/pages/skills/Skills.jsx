@@ -3,9 +3,9 @@ import Heading_text from '../../components/heading_text/Heading_text'
 function Skills() {
     return (
         <>
-            <div className='min-h-screenflex justify-center items-start pt-10 text-4xl font-bold  '>
-                <div>
-                    <Heading_text text='Skills' />
+            <div id='skills' className='min-h-screen flex justify-center items-start pt-10 text-4xl font-bold  '>
+                <div className='flex justify-center items-center'>
+                    <Heading_text text='Technical skills' />
                 </div>
                 <div>
 

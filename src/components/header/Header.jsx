@@ -24,6 +24,7 @@ function Header() {
                     <div onClick={() => ScrollToSection('Home')} className='cursor-pointer text-(--muted-text) hover:text-white transition duration-300'>Home</div>
                     <div onClick={() => ScrollToSection('About')} className='cursor-pointer text-(--muted-text) hover:text-white transition duration-300'>About</div>
                     <div onClick={() => ScrollToSection('project')} className='cursor-pointer text-(--muted-text) hover:text-white transition duration-300'>Projects</div>
+                    <div onClick={() => ScrollToSection('skills')} className='cursor-pointer text-(--muted-text) hover:text-white transition duration-300'>Skills</div>
                     <div onClick={() => ScrollToSection('Contact')} className='cursor-pointer text-(--muted-text) hover:text-white transition duration-300'>Contact</div>
                 </div>
             </div>
