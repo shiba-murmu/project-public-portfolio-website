@@ -3,7 +3,7 @@ import React from 'react'
 function CustomHeader() {
     return (
         <>
-            <div  className='sticky top-0 z-50 flex justify-between  items-center shadow-md'>
+            <div  className='sticky bg-(--bg-color) top-0 z-50 flex justify-between  items-center shadow-md'>
                 <div className='py-3 md:py-4 pl-3 md:pl-15  text-2xl heading-text'>Shiba Murmu</div>
                 <div className='md:hidden py-3 pr-3 cursor-pointer'>
                     {/* size of this svg is 42 in google icons */}
