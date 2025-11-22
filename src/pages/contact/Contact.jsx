@@ -1,5 +1,5 @@
 import React from 'react'
-import Heading_text from '../../components/Heading_text/Heading_text'
+import Heading_text from '../../components/heading_text/Heading_text'
 function Contact() {
   return (
     <>
