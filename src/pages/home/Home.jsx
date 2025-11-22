@@ -3,6 +3,7 @@ import Profile from '../profile/Profile'
 import About from '../about/About'
 import Contact from '../contact/Contact'
 import Project from '../projects/Project'
+import Skills from '../skills/Skills'
 function Home() {
     return (
         <>
@@ -11,6 +12,7 @@ function Home() {
                 <About />
                 <Project />
                 {/* Here skills component will be adding here. */}
+                <Skills />
                 <Contact />
             </div>
         </>

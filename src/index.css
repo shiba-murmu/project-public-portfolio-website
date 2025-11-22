@@ -52,7 +52,7 @@ body {
 
 :root {
   /* ***************************** */
-  --bluish: #4973de;
+  --bluish: #282a35;
   /* this variable is used for the bluish color gradient like buttons background color */
   --bluish-text: white;
 
@@ -61,6 +61,10 @@ body {
   /******************************** */
   --bg-color: rgb(255, 255, 255);
   --text-color: rgb(0, 0, 0);
+
+  /* Skills background colors and its text colors  */
+  --skills-bg : #449383;
+  --skills-text-color : white;
 }
 
 
