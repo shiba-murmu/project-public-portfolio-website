@@ -4,12 +4,18 @@
 This file is used for global css here
 
 */
+
+:root {
+    --bg-color : #08080a;
+}
+
 body {
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500; /* Adjusted font weight  300 to 800*/
   font-style: normal;
   height: 100vh;
+  /* background-color: '#08080a'; */
   overflow-y: scroll; /* Enable vertical scrolling */
   /* background-image: url('/background3.jpg'); */
 }
@@ -50,21 +56,5 @@ body {
   background: linear-gradient(180deg, #155e8d, #256d9d);
 }
 
-:root {
-  /* ***************************** */
-  --bluish: #282a35;
-  /* this variable is used for the bluish color gradient like buttons background color */
-  --bluish-text: white;
-
-  --about-bg: #fcf5ef;
-    --muted: #6c757d;
-  /******************************** */
-  --bg-color: rgb(255, 255, 255);
-  --text-color: rgb(0, 0, 0);
-
-  /* Skills background colors and its text colors  */
-  --skills-bg : #449383;
-  --skills-text-color : white;
-}
 
 

@@ -17,7 +17,7 @@ function Project_card() {
 
                     <div>
                         <span className='text-md font-bold'>Tech used : </span>
-                        <ul className='flex gap-1 text-(--bluish)'>
+                        <ul className='flex gap-1'>
                             <li>Html,</li>
                             <li>CSS,</li>
                             <li>Javascript,</li>
@@ -26,16 +26,16 @@ function Project_card() {
 
                     <div>
                         <span className='text-md font-bold'>Description : </span>
-                        <p className='text-gray-500'>Project description goes here</p>
+                        <p className=''>Project description goes here</p>
                     </div>
 
                     {/* FOOTER BUTTONS */}
                     <div className=' flex justify-center items-center space-x-4 mt-auto pt-3 pb-3 rounded-md'>
                         <Link to='/project-details'>
-                            <button className='bg-(--bluish) w-20 text-white px-4 py-2 flex justify-center items-center rounded-md'>Details</button>
+                            <button className=' w-2 px-4 py-2 flex justify-center items-center rounded-md'>Details</button>
                         </Link>
-                        <button className='bg-(--bluish) w-20 text-white px-4 py-2 rounded-md'>Code</button>
-                        <button className='bg-(--bluish) w-20 text-white px-4 py-2 rounded-md'>Live</button>
+                        <button className=' w-20  px-4 py-2 rounded-md'>Code</button>
+                        <button className=' w-20  px-4 py-2 rounded-md'>Live</button>
                     </div>
                 </div>
 

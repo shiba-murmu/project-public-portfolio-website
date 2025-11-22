@@ -5,8 +5,8 @@ function Project_collection() {
     return (
         <>
             <div className=' md:w-[170vh] min-h-screen flex flex-col justify-start md:justify-start items-center '>
-                <div className='flex md:hidden mt-5 border-b-2 border-(--bluish) py-3 px-4  shadow-md  justify-center items-center'>
-                    <span className='text-3xl md:text-5xl font-extrabold text-(--bluish)'>Projects collection</span>
+                <div className='flex md:hidden mt-5 border-b-2  py-3 px-4  shadow-md  justify-center items-center'>
+                    <span className='text-3xl md:text-5xl font-extrabold '>Projects collection</span>
                 </div>
                 <div className='md:hidden'>
                     {/* For mobile  */}

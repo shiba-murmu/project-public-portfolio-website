@@ -3,7 +3,7 @@ import Heading_text from '../../components/Heading_text/Heading_text'
 function About() {
     return (
         <>
-            <div id='About' className='min-h-screen pt-40 rounded-t-full bg-(--about-bg) md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
+            <div id='About' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
                 <div className=''>
                     <Heading_text text='About me' />
                 </div>
@@ -15,12 +15,12 @@ function About() {
                                 className="text-sm md:text-lg                                                                              md:flex-1 leading-relaxed text-center md:text-left"
 
                             >
-                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl text-(--bluish)">Shiba Murmu</span> — a frontend engineer who loves building
+                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl ">Shiba Murmu</span> — a frontend engineer who loves building
                                 clean, fast and intuitive web experiences. I started coding during my B.Tech in Computer
                                 Science, and over time I found myself drawn toward creating polished user interfaces and
                                 solving real user-experience problems.
                                 <br /><br />
-                                I enjoy working with <span className="font-extrabold text-(--bluish) ">React, Tailwind CSS, and Firebase</span>, and I’m always
+                                I enjoy working with <span className="font-extrabold ">React, Tailwind CSS, and Firebase</span>, and I’m always
                                 exploring tools that help create smoother and more human-friendly digital products. My focus
                                 is simple: build interfaces that are lightweight, responsive, and visually consistent —
                                 without unnecessary complexity.
@@ -42,7 +42,6 @@ function About() {
                             </div>
                         </div>
                     </section>
-
                 </div>
             </div>
         </>
