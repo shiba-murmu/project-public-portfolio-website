@@ -12,15 +12,15 @@ function About() {
                     <section id="about" className="p-6 rounded-2xl" style={{ background: '' }}>
                         <div className="mt-3 md:flex md:flex-col md:gap-6">
                             <p
-                                className="text-sm md:text-lg                                                                              md:flex-1 leading-relaxed text-center md:text-left"
+                                className="text-sm md:text-lg text-(--muted-text)                                                                              md:flex-1 leading-relaxed text-center md:text-left"
 
                             >
-                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl ">Shiba Murmu</span> — a frontend engineer who loves building
+                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl text-(--text-color)">Shiba Murmu</span> — a frontend engineer who loves building
                                 clean, fast and intuitive web experiences. I started coding during my B.Tech in Computer
                                 Science, and over time I found myself drawn toward creating polished user interfaces and
                                 solving real user-experience problems.
                                 <br /><br />
-                                I enjoy working with <span className="font-extrabold ">React, Tailwind CSS, and Firebase</span>, and I’m always
+                                I enjoy working with <span className="font-extrabold text-(--text-color)">React, Tailwind CSS, and Firebase</span>, and I’m always
                                 exploring tools that help create smoother and more human-friendly digital products. My focus
                                 is simple: build interfaces that are lightweight, responsive, and visually consistent —
                                 without unnecessary complexity.
@@ -32,7 +32,7 @@ function About() {
 
                             <div className="mt-6 flex flex-col gap-2 justify-center items-center md:justify-start md:items-start md:mt-0 md:w-full">
                                 <h4 className="font-extrabold text-md md:text-3xl mb-2">Quick Facts</h4>
-                                <ol className=" text-center md:text-start list-inside space-y-1 text-sm md:text-lg">
+                                <ol className=" text-(--muted-text) text-center md:text-start list-inside space-y-1 text-sm md:text-lg">
                                     <li>B.Tech in Computer Science</li>
                                     <li>2+ years of experience</li>
                                     <li>Passionate about UI/UX design</li>
