@@ -13,7 +13,7 @@ function Profile() {
                         <h1 className='text-3xl md:text-4xl  md:hidden regular-bolder font-extrabold '>Shiba Murmu</h1>
                     </div>
                     <div className='md:hidden text-center mt-2'>
-                        <h3 className='text-lg '>Frontend Developer</h3>
+                        <h3 className='text-lg text-(--muted-text) '>Frontend Developer</h3>
                     </div>
                     <div className='md:hidden flex gap-5 mt-4 font-semibold'>
                         <div className='cursor-pointer bg-(--button-background)  px-4 py-2 rounded-md transition duration-300'>
@@ -33,10 +33,10 @@ function Profile() {
                     </div>
                     <div>
                         {/* Not visible to mobile */}
-                        <h3 className='hidden md:block text-2xl '>Frontend Developer</h3>
+                        <h3 className='hidden md:block text-(--muted-text) text-2xl '>Frontend Developer</h3>
                     </div>
                     <div>
-                        <p className='text-md mt-10 md:mt-0 px-5 md:px-0 md:text-lg text-center md:text-left max-w-xl'>
+                        <p className='text-md mt-10 md:mt-0 px-5 md:px-0 md:text-lg text-center md:text-left max-w-xl text-(--muted-text)'>
                             I build clean, fast, and accessible web experiences using React and Tailwind, Currently open to freelance and full-time opportunities. Let's connect!
                         </p>
                     </div>
@@ -63,7 +63,7 @@ function Profile() {
                         <h4 className=" text-md px-5 py-3 rounded-md cursor-pointer 
                flex items-center bg-(--button-background) gap-2">
                             Resume
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
                                 <path d="M160-80v-80h640v80H160Zm320-160L200-600h160v-280h240v280h160L480-240Zm0-130 116-150h-76v-280h-80v280h-76l116 150Zm0-150Z" />
                             </svg>
                         </h4>
