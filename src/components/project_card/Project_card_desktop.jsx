@@ -10,7 +10,7 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                         alt="" />
                 </div>
                 <div style={{order : orderTwo}} className='flex order-${orderTwo} justify-center items-start flex-col'>
-                    <div className='border-b  shadow-md mb-3 rounded-4xl border-(--bluish) py-2 px-20'>
+                    <div className='border-b-2  shadow-md mb-3  border-(--bluish) py-2 px-20'>
                         <span className='text-3xl font-bold text-(--bluish)'>Hotel management</span>
                     </div>
                     <div>
