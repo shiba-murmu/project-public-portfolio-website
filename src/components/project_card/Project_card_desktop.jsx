@@ -25,7 +25,7 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                         <span className='font-extrabold text-xl'>Description : </span>
                         <p className=' text-lg pl-5 text-(--muted-text)'>Project description goes here</p>
                     </div>
-                    <div className='flex w-full justify-start items-start space-x-4 mt-auto pt-3 pb-3 rounded-md'>
+                    <div className='flex w-full justify-start items-start space-x-4 mt-auto pt-3 pb-3 rounded-md text-(--button-text-color)'>
                         <Link to='/project-details'>
                             <button className='cursor-pointer bg-(--button-background) w-30   px-4 py-2 rounded-md'>Details</button>
                         </Link>

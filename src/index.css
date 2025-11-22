@@ -8,8 +8,11 @@ This file is used for global css here
 :root {
     --bg-color : #08080a;
     --text-color : #aeaac0;
+    /* For buttons */
     --button-background : #815ed7;
+    --button-text-color : white;
     --border-color : #35373d;
+    /* For long text */
     --muted-text : #626262;
 }
 
