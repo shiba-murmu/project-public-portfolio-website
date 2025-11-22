@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 function Project_card_desktop({ orderOne, orderTwo , path }) {
     return (
         <>
-            <div className='grid grid-cols-2 w-full gap-50  h-96'>
+            <div className='grid grid-cols-2 bg-(--footer-background) rounded-2xl items-center gap-30   px-20  h-[90vh] '>
                 <div style={{order : orderOne}} className='flex order-${orderOne}  justify-center items-center'>
                     <img src={path}
                         className=' object-contain h-full w-full'
                         alt="" />
                 </div>
                 <div style={{order : orderTwo}} className='flex order-${orderTwo} justify-center items-start flex-col'>
-                    <div className='border-b-2  shadow-md mb-3  border-(--bluish) py-2 px-20'>
-                        <span className='text-3xl font-bold text-(--bluish)'>Hotel management</span>
+                    <div className='border-b-2  shadow-md mb-3  border-(--bluish) pb-2 '>
+                        <span className='text-2xl font-bold text-(--bluish)'>Hotel management system</span>
                     </div>
                     <div>
                         <span className='font-extrabold text-xl'>Tech used : </span>

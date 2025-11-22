@@ -5,7 +5,7 @@ function Project_card() {
     // Mobile view project card...
     return (
         <>
-            <div className='md:hidden  h-[60vh]  rounded-md shadow-md m-4'>
+            <div className='md:hidden  h-[60vh] bg-(--footer-background)  rounded-md shadow-md m-4'>
                 <div className='p-4 flex flex-col h-full'>
                     <h3 className='text-xl text-center font-bold mb-2'>Hotel management</h3>
 
