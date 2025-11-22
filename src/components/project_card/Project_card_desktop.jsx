@@ -15,7 +15,7 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                     </div>
                     <div>
                         <span className='font-extrabold text-xl'>Tech used : </span>
-                        <ul className='flex text-lg font-bold pl-5 gap-1 text-(--muted-text)'>
+                        <ul className='flex text-lg font-semibold pl-5 gap-1 text-(--muted-text)'>
                             <li>Html,</li>
                             <li>CSS,</li>
                             <li>Javascript,</li>

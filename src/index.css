@@ -45,7 +45,7 @@ body {
 
 /* For Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 10px; /* scrollbar width */
+  width: 5px; /* scrollbar width */
 }
 
 ::-webkit-scrollbar-track {
@@ -53,12 +53,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #256d9d, #96c7e7);
+  background-color: var(--bg-color);
   border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #155e8d, #256d9d);
+  transition: background-color 0.3s ease;
 }
 
 
