@@ -15,7 +15,7 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                     </div>
                     <div>
                         <span className='font-extrabold text-xl'>Tech used : </span>
-                        <ul className='flex text-lg font-bold pl-5 gap-1 text-(--bluish)'>
+                        <ul className='flex text-lg font-bold pl-5 gap-1 text-(--muted-text)'>
                             <li>Html,</li>
                             <li>CSS,</li>
                             <li>Javascript,</li>
@@ -23,14 +23,14 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                     </div>
                     <div>
                         <span className='font-extrabold text-xl'>Description : </span>
-                        <p className=' text-lg pl-5'>Project description goes here</p>
+                        <p className=' text-lg pl-5 text-(--muted-text)'>Project description goes here</p>
                     </div>
                     <div className='flex w-full justify-start items-start space-x-4 mt-auto pt-3 pb-3 rounded-md'>
                         <Link to='/project-details'>
-                            <button className='cursor-pointer w-30 bg-(--bluish)  px-4 py-2 rounded-md'>Details</button>
+                            <button className='cursor-pointer bg-(--button-background) w-30   px-4 py-2 rounded-md'>Details</button>
                         </Link>
-                        <button className='cursor-pointer bg-(--bluish) px-4 py-2 w-30 rounded-md'>Code</button>
-                        <button className='cursor-pointer w-30 bg-(--bluish) px-4 py-2 rounded-md'>Live</button>
+                        <button className= ' bg-(--button-background) cursor-pointer  px-4 py-2 w-30 rounded-md'>Code</button>
+                        <button className='cursor-pointer w-30 bg-(--button-background) px-4 py-2 rounded-md'>Live</button>
                     </div>
                 </div>
             </div>
