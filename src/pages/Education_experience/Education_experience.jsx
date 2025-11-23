@@ -1,6 +1,27 @@
 import React from 'react'
 import Text from '../../components/customtext/Text'
 function Education_experience() {
+
+    const Education_detail = [
+        {
+            Institution: 'Generix Info Tech',
+            Degree: 'Web development',
+            Description: 'Full stack web development course',
+            Time_period: '12/03/2023 to  12/04/2023',
+            address: 'TATA'
+        },
+
+        {
+            Institution: 'Generix Info Tech',
+            Degree: 'Web development',
+            Description: 'Full stack web development course',
+            Time_period: '12/03/2023 to  12/04/2023',
+            address: 'TATA'
+        },
+    ]
+
+
+
     const data = [
         {
             Company: 'Generix Info Tech',
@@ -44,9 +65,16 @@ function Education_experience() {
         }
     ]
 
-    return (
-        <>
-            <div id='experience' className='min-h-screen  pt-10 md:pt-0 flex flex-col justify-start items-center gap-5'>
+    const handleScroll = () => {
+        const element = document.getElementById('experience');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const Experience_component = () => {
+        return (
+            <>
                 <div>
                     <Text text={'Education & Experience'} />
                 </div>
@@ -61,15 +89,7 @@ function Education_experience() {
                                     <h1 className='text-center text-lg font-bold border-b border-(--muted-text)'>{item.Company}</h1>
                                     <h3 className='text-md font-bold'>{item.Role}</h3>
                                     <p className='text-md font-light text-(--muted-text)'>{item.Description}</p>
-                                    <p>Tech :
-                                        <span>
-                                            {item.tect_stack.map((item, index) => {
-                                                return (
-                                                    <span key={index} className='text-md font-light text-(--muted-text)'> {item}, </span>
-                                                )
-                                            })}
-                                        </span>
-                                    </p>
+
                                     <p className='text-md '>
                                         Time : <span className='text-md font-light text-(--muted-text)'>{item.Time_period}</span>
                                     </p>
@@ -82,6 +102,7 @@ function Education_experience() {
                     }
                 </div>
 
+                {/* Mobile screen view  */}
                 <div className="md:hidden no-scrollbar w-full px-1 overflow-x-auto overflow-y-hidden whitespace-nowrap  scrollbar-hide">
                     {data.map((item, index) => (
                         <div
@@ -119,6 +140,18 @@ function Education_experience() {
                         </div>
                     ))}
                 </div>
+            </>
+        )
+    }
+
+
+
+
+    return (
+        // Main function codes here.
+        <>
+            <div id='experience' className='min-h-screen  pt-10 md:pt-0 flex flex-col justify-start items-center gap-5'>
+                <Experience_component />
             </div>
         </>
     )
