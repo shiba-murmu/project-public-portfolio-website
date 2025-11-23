@@ -4,7 +4,7 @@ function Contact() {
     return (
         <>
             <div id='contact' className='min-h-screen flex justify-center items-center text-4xl font-bold '>
-                <Text text={'Contace Me'} />
+                <Text text={'Contact Me'} />
             </div>
         </>
     )
