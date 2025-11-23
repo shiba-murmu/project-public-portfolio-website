@@ -43,7 +43,7 @@ function Education_experience() {
             address: 'TATA'
         }
     ]
-    const cards = [1, 2, 3, 4, 5, 6];
+
     return (
         <>
             <div id='experience' className='min-h-screen  pt-10 md:pt-0 flex flex-col justify-start items-center gap-5'>
