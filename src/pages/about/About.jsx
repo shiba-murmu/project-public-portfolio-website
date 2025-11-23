@@ -1,5 +1,6 @@
 import React , { useState , useEffect} from 'react'
-import Heading_text from '../../components/heading_text/Heading_text'
+import Heading_text from '../../components/heading_text/Heading_text';
+
 function About() {
     const [name , setName] = useState('No name')
     const [lastName , setLastName] = useState(null)
