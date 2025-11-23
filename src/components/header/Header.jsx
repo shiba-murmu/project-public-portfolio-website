@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
+/***
+ * One issue is not solved for project options in the 
+ * in the desktop page for navabar that color is not 
+ * changing while scrolling every options .
+ * 
+ */
+
+
 /**
  * ScrollToSection now optionally accepts setActiveSection to immediately mark clicked section active.
  */
