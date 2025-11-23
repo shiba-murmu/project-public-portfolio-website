@@ -1,14 +1,24 @@
-import React , {useState , useEffect}  from 'react'
-
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 function Profile() {
-    const [name , setName] = useState('No name');
-    const [lastName , setLastName] = useState(null);
-    const [profession , setProfession] = useState('No profession');
+    const [name, setName] = useState('No name');
+    const [lastName, setLastName] = useState(null);
+    const [profession, setProfession] = useState('No profession');
     useEffect(() => {
         setName('Bhawna');
         setLastName('Chaudhary');
         setProfession('Developer');
     }, [])
+    function ScrollToSection(id) {
+    const el = document.getElementById(id);
+    const header = document.getElementById("site-header");
+    if (!el) return;
+    const headerHeight = header ? header.offsetHeight : 0;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+    window.scrollTo({ top, behavior: "smooth" });
+
+   
+}
     return (
         <>
             <div id='home' className='grid h-screen items-center mt-10  md:mt-0  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center md:p-10 '>
@@ -24,10 +34,11 @@ function Profile() {
                         <h3 className='text-lg text-(--muted-text) '>{profession}</h3>
                     </div>
                     <div className='md:hidden flex gap-5 mt-4 font-semibold'>
-                        <div className='cursor-pointer bg-(--button-background)  px-4 py-2 rounded-md transition duration-300 text-(--button-text-color)'>
+
+                        <div onClick={() => ScrollToSection('project')} className='cursor-pointer bg-(--button-background)  px-4 py-2 rounded-md transition duration-300 text-(--button-text-color)'>
                             View work
                         </div>
-                        <div className='cursor-pointer  border px-4 py-2 rounded-md border-(--border-color) text-(--button-text-color)  transition duration-300'>
+                        <div onClick={() => ScrollToSection('contact')} className='cursor-pointer  border px-4 py-2 rounded-md border-(--border-color) text-(--button-text-color)  transition duration-300'>
                             Contact
                         </div>
                     </div>
@@ -50,10 +61,10 @@ function Profile() {
                     </div>
                     <div className='hidden md:flex gap-5 mt-4  font-semibold'>
                         {/* not visible to mobile */}
-                        <div className='cursor-pointer  px-4 py-2 rounded-md transition bg-(--button-background) text-(--button-text-color)  duration-300'>
+                        <div onClick={() => ScrollToSection('project')} className='cursor-pointer  px-4 py-2 rounded-md transition bg-(--button-background) text-(--button-text-color)  duration-300'>
                             View work
                         </div>
-                        <div className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--border-color) text-(--button-text-color) hover:bg-(--border-color)  transition duration-300'>
+                        <div onClick={() => ScrollToSection('contact')} className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--border-color) text-(--button-text-color) hover:bg-(--border-color)  transition duration-300'>
                             Contact
                         </div>
                     </div>
@@ -77,7 +88,7 @@ function Profile() {
                         </h4>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
