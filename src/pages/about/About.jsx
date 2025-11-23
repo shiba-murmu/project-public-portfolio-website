@@ -1,6 +1,12 @@
-import React from 'react'
+import React , { useState , useEffect} from 'react'
 import Heading_text from '../../components/heading_text/Heading_text'
 function About() {
+    const [name , setName] = useState('No name')
+    const [lastName , setLastName] = useState(null)
+    useEffect(() => {
+        setName('Bhawna')
+        setLastName('Chaudhary')
+    })
     return (
         <>
             <div id='About' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
@@ -15,7 +21,7 @@ function About() {
                                 className="text-sm md:text-lg text-(--muted-text)                                                                              md:flex-1 leading-relaxed text-center md:text-left"
 
                             >
-                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl text-(--text-color)">Shiba Murmu</span> — a frontend engineer who loves building
+                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl text-(--text-color)">{name} {lastName}</span> — a frontend engineer who loves building
                                 clean, fast and intuitive web experiences. I started coding during my B.Tech in Computer
                                 Science, and over time I found myself drawn toward creating polished user interfaces and
                                 solving real user-experience problems.

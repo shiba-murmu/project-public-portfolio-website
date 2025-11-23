@@ -1,19 +1,27 @@
-import React from 'react'
+import React , {useState , useEffect}  from 'react'
 
 function Profile() {
+    const [name , setName] = useState('No name');
+    const [lastName , setLastName] = useState(null);
+    const [profession , setProfession] = useState('No profession');
+    useEffect(() => {
+        setName('Bhawna');
+        setLastName('Chaudhary');
+        setProfession('Developer');
+    }, [])
     return (
         <>
             <div id='Home' className='grid h-screen items-center mt-10  md:mt-0  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center md:p-10 '>
                 <div className='flex md:order-2 flex-col items-center '>
                     <div>
-                        <img src="https://png.pngtree.com/png-vector/20230903/ourmid/pngtree-3d-illustration-avatar-profile-man-png-image_9945226.png" alt="profile" className='rounded-md
-                        h-40 w-40 md:h-80 md:w-80'/>
+                        <img src="https://images.unsplash.com/photo-1583391265517-35bbdad01209?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwYmFja2dyb3VuZCUyMGdpcmx8ZW58MHx8MHx8fDA%3D" alt="profile" className='rounded-full
+                        h-40 w-40 md:h-80 md:w-80 object-cover '/>
                     </div>
                     <div className='text-center mt-5'>
-                        <h1 className='text-3xl md:text-4xl  md:hidden regular-bolder font-extrabold '>Shiba Murmu</h1>
+                        <h1 className='text-3xl   md:hidden  font-bold '>{name} {lastName}</h1>
                     </div>
                     <div className='md:hidden text-center mt-2'>
-                        <h3 className='text-lg text-(--muted-text) '>Frontend Developer</h3>
+                        <h3 className='text-lg text-(--muted-text) '>{profession}</h3>
                     </div>
                     <div className='md:hidden flex gap-5 mt-4 font-semibold'>
                         <div className='cursor-pointer bg-(--button-background)  px-4 py-2 rounded-md transition duration-300 text-(--button-text-color)'>
@@ -28,12 +36,12 @@ function Profile() {
                     <div>
                         {/* For desktop screen */}
                         <div className='hidden md:block text-5xl regular-bolder font-extrabold'>
-                            Hi - I'm <span className=''>Shiba</span> <br />Murmu
+                            Hi - I'm <span className=''>{name}</span> <br />{lastName}
                         </div>
                     </div>
                     <div>
                         {/* Not visible to mobile */}
-                        <h3 className='hidden md:block text-(--muted-text) text-2xl '>Frontend Developer</h3>
+                        <h3 className='hidden md:block text-(--muted-text) text-2xl '>{profession}</h3>
                     </div>
                     <div>
                         <p className='text-md mt-10 md:mt-0 px-5 md:px-0 md:text-lg text-center md:text-left max-w-xl text-(--muted-text)'>
