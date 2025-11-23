@@ -95,9 +95,3 @@ function Profile() {
 
 export default Profile
 
-{/* <div className='hidden md:flex gap-5 mt-10'>
-                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
-                            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="twitter" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
-                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin" className='h-8 w-8 cursor-pointer hover:scale-110 transition duration-300'/>
-                        </div> */}
