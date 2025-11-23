@@ -118,7 +118,7 @@ function Header() {
                 {/* desktop menu */}
                 <div className="hidden md:flex space-x-8 p-4 text-lg">
                     <div onClick={() => ScrollToSection("Home")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Home</div>
-                    <div onClick={() => ScrollToSection("About")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">About</div>
+                    <div onClick={() => ScrollToSection("About")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">About me</div>
                     <div onClick={() => ScrollToSection("project")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Projects</div>
                     <div onClick={() => ScrollToSection("skills")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Skills</div>
                     <div onClick={() => ScrollToSection("experience")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Experience</div>
@@ -138,9 +138,10 @@ function Header() {
                 >
                     <nav className="flex flex-col items-center justify-center p-4 space-y-5 bg-(--footer-background) text-lg rounded-b-3xl">
                         <button onClick={() => ScrollToSection("Home", setMenuOpen)} className="w-full">Home</button>
-                        <button onClick={() => ScrollToSection("About", setMenuOpen)} className="w-full">About</button>
+                        <button onClick={() => ScrollToSection("About", setMenuOpen)} className="w-full">About me</button>
                         <button onClick={() => ScrollToSection("project", setMenuOpen)} className="w-full">Projects</button>
-                        <button onClick={() => ScrollToSection("skills", setMenuOpen)} className="w-full">Skills</button>
+                        <button onClick={() => ScrollToSection("skills", setMenuOpen)} className="w-full hidden md:block">Skills</button>
+                        <button onClick={() => ScrollToSection("skills", setMenuOpen)} className="w-full not-last:md:hidden">Technical skills</button>
                         <button onClick={() => ScrollToSection("experience", setMenuOpen)} className="w-full">Experience</button>
                         <button onClick={() => ScrollToSection("contact", setMenuOpen)} className="w-full">Contact</button>
                     </nav>
