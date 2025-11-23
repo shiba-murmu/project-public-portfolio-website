@@ -9,10 +9,12 @@ function Project_collection() {
                     <span className='text-3xl md:text-5xl font-extrabold '>Projects collection</span>
                 </div>
                 <div className='md:hidden'>
+                    
                     {/* For mobile  */}
                     <Project_card />
                     <Project_card />
                     <Project_card />
+
                 </div>
                 <div className='hidden md:flex md:flex-col md:gap-40 w-full py-10 '>
                     {/* Designed for desktop screen */}
