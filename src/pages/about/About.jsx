@@ -1,8 +1,8 @@
-import React , { useState , useEffect} from 'react'
-
+import React, { useState, useEffect } from 'react'
+import Text from '../../components/customtext/Text'
 function About() {
-    const [name , setName] = useState('No name')
-    const [lastName , setLastName] = useState(null)
+    const [name, setName] = useState('No name')
+    const [lastName, setLastName] = useState(null)
     useEffect(() => {
         setName('Bhawna')
         setLastName('Chaudhary')
@@ -12,9 +12,10 @@ function About() {
             <div id='About' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
                 <div className=''>
                     {/* <Heading_text text='About me' /> */}
-                    
+                    <Text text={'About me'} />
+
                 </div>
-                
+
                 <div>
                     <section id="about" className="p-6 rounded-2xl" style={{ background: '' }}>
                         <div className="mt-3 md:flex md:flex-col md:gap-6">
