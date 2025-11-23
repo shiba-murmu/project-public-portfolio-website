@@ -1,4 +1,5 @@
 import React from 'react'
+
 function Education_experience() {
     return (
         <>
@@ -6,6 +7,7 @@ function Education_experience() {
                 <div>
 
                     {/* <Heading_text text='Education & Experience' /> */}
+
                 </div>
             </div>
         </>
