@@ -1,5 +1,4 @@
 import React , { useState , useEffect} from 'react'
-import Heading_text from '../../components/heading_text/Heading_text';
 
 function About() {
     const [name , setName] = useState('No name')
@@ -12,7 +11,8 @@ function About() {
         <>
             <div id='About' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
                 <div className=''>
-                    <Heading_text text='About me' />
+                    {/* <Heading_text text='About me' /> */}
+                    
                 </div>
                 
                 <div>
@@ -56,3 +56,19 @@ function About() {
 }
 
 export default About
+
+// import React from 'react'
+
+// function Heading_text({ text }) {
+//     return (
+//         <>
+//             <div className=''>
+//                 <span className='text-2xl text-center  md:text-5xl font-extrabold'>
+//                     {text}
+//                 </span>
+//             </div>
+//         </>
+//     )
+// }
+
+// export default Heading_text;

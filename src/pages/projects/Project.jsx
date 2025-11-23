@@ -1,5 +1,4 @@
 import React from 'react'
-import Heading_text from '../../components/heading_text/Heading_text'
 import { Link } from 'react-router-dom'
 import Project_collection from './Project_list.jsx/Project_collection'
 import Project_card from '../../components/project_card/Project_card'
@@ -8,7 +7,7 @@ function Project() {
         <>
             <div id='project' className='min-h-screen pb-10 pt-20 flex  justify-start items-start  md:justify-center md:items-center  flex-col'>
                 <div className='w-full  md:w-full flex justify-center gap-4 items-center p-4 rounded-md'>
-                    <Heading_text text='My work' />
+                    {/* <Heading_text text='My work' /> */}
 
                     <svg xmlns="http://www.w3.org/2000/svg" className='md:h-14 md:w-14' height="30px" viewBox="0 -960 960 960" width="30px" strokeWidth="30" fill='currentColor'><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z" /></svg>
                 </div>
