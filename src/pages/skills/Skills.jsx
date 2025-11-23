@@ -5,7 +5,7 @@ function Skills() {
     const data_box = [
         {
             title: 'Programming Languages',
-            list: ['Python', 'Java', 'JavaScript']
+            list: ['C', 'C++', 'Python', 'Java', 'JavaScript', 'Dart']
         },
         {
             title: 'Framework & Libraries',
@@ -13,11 +13,11 @@ function Skills() {
         },
         {
             title: 'Database',
-            list: ['MySQL', 'MongoDB']
+            list: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase']
         },
         {
             title: 'Others',
-            list: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma', 'Adobe Photoshop']
+            list: ['Git', 'GitHub', 'VS Code', 'Ms office', 'Postman', 'Figma', 'Adobe Photoshop']
         }
     ]
     return (

@@ -5,8 +5,10 @@ function Education_experience() {
         <>
             <div id='experience' className='min-h-screen  pt-10 md:pt-0 flex justify-center items-start'>
                 <div>
-
                     <Text text={'Education & Experience'} />
+                </div>
+                <div>
+                        
                 </div>
             </div>
         </>
