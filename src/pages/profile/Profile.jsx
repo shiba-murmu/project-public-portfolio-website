@@ -11,7 +11,7 @@ function Profile() {
     }, [])
     return (
         <>
-            <div id='Home' className='grid h-screen items-center mt-10  md:mt-0  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center md:p-10 '>
+            <div id='home' className='grid h-screen items-center mt-10  md:mt-0  grid-col-2 md:grid-cols-2 md:gap-5 md:px-30 md:justify-center md:items-center md:p-10 '>
                 <div className='flex md:order-2 flex-col items-center '>
                     <div>
                         <img src="https://images.unsplash.com/photo-1583391265517-35bbdad01209?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwYmFja2dyb3VuZCUyMGdpcmx8ZW58MHx8MHx8fDA%3D" alt="profile" className='rounded-full

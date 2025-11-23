@@ -7,12 +7,14 @@ function ScrollToSection(id, closeMenu) {
     const headerHeight = header ? header.offsetHeight : 0;
     const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
     window.scrollTo({ top, behavior: "smooth" });
+
     if (closeMenu) closeMenu(false);
 }
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownHeight, setDropdownHeight] = useState(0); // for smooth max-height animation
+    const [activeSection, setActiveSection] = useState("Home");
     const containerRef = useRef(null);
     const dropdownRef = useRef(null);
 
@@ -87,6 +89,39 @@ function Header() {
         };
     }, [menuOpen]);
 
+    // IntersectionObserver to update activeSection on scroll
+    useEffect(() => {
+        const sections = ["home", "about", "project", "skills", "experience", "contact"];
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.35, // when ~35% of section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    // helper to click + highlight
+    const handleClick = (id) => {
+        // scroll (this closes mobile menu if setMenuOpen passed in)
+        ScrollToSection(id, setMenuOpen);
+        // set active immediately
+        setActiveSection(id);
+    };
+
     return (
         <div ref={containerRef} className="relative">
             <div
@@ -117,12 +152,42 @@ function Header() {
 
                 {/* desktop menu */}
                 <div className="hidden md:flex space-x-8 p-4 text-lg">
-                    <div onClick={() => ScrollToSection("Home")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Home</div>
-                    <div onClick={() => ScrollToSection("About")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">About me</div>
-                    <div onClick={() => ScrollToSection("project")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Projects</div>
-                    <div onClick={() => ScrollToSection("skills")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Skills</div>
-                    <div onClick={() => ScrollToSection("experience")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Experience</div>
-                    <div onClick={() => ScrollToSection("contact")} className="cursor-pointer text-(--muted-text) hover:text-white transition duration-300">Contact</div>
+                    <div
+                        onClick={() => handleClick("home")}
+                        className={`cursor-pointer transition duration-300 ${activeSection === "home" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                    >
+                        Home
+                    </div>
+                    <div
+                        onClick={() => handleClick("about")}
+                        className={`cursor-pointer transition duration-300 ${activeSection === "about" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                    >
+                        About me
+                    </div>
+                    <div
+                        onClick={() => handleClick("project")}
+                        className={`cursor-pointer transition duration-300 ${activeSection === "project" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                    >
+                        Projects
+                    </div>
+                    <div
+                        onClick={() => handleClick("skills")}
+                        className={`cursor-pointer transition duration-300 ${activeSection === "skills" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                    >
+                        Skills
+                    </div>
+                    <div
+                        onClick={() => handleClick("experience")}
+                        className={`cursor-pointer transition duration-300 ${activeSection === "experience" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                    >
+                        Experience
+                    </div>
+                    <div
+                        onClick={() => handleClick("contact")}
+                        className={`cursor-pointer transition duration-300 ${activeSection === "contact" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                    >
+                        Contact
+                    </div>
                 </div>
 
                 {/* MOBILE DROPDOWN — animated with max-height + opacity */}
@@ -137,13 +202,48 @@ function Header() {
                     }}
                 >
                     <nav className="flex flex-col items-center justify-center p-4 space-y-5 bg-(--footer-background) text-lg rounded-b-3xl">
-                        <button onClick={() => ScrollToSection("Home", setMenuOpen)} className="w-full">Home</button>
-                        <button onClick={() => ScrollToSection("About", setMenuOpen)} className="w-full">About me</button>
-                        <button onClick={() => ScrollToSection("project", setMenuOpen)} className="w-full">Projects</button>
-                        <button onClick={() => ScrollToSection("skills", setMenuOpen)} className="w-full hidden md:block">Skills</button>
-                        <button onClick={() => ScrollToSection("skills", setMenuOpen)} className="w-full not-last:md:hidden">Technical skills</button>
-                        <button onClick={() => ScrollToSection("experience", setMenuOpen)} className="w-full">Experience</button>
-                        <button onClick={() => ScrollToSection("contact", setMenuOpen)} className="w-full">Contact</button>
+                        <button
+                            onClick={() => { ScrollToSection("home", setMenuOpen); setActiveSection("home"); }}
+                            className={`w-full text-left ${activeSection === "Home" ? "text-white font-semibold" : ""}`}
+                        >
+                            Home
+                        </button>
+                        <button
+                            onClick={() => { ScrollToSection("about", setMenuOpen); setActiveSection("about"); }}
+                            className={`w-full text-left ${activeSection === "About" ? "text-white font-semibold" : ""}`}
+                        >
+                            About me
+                        </button>
+                        <button
+                            onClick={() => { ScrollToSection("project", setMenuOpen); setActiveSection("project"); }}
+                            className={`w-full text-left ${activeSection === "project" ? "text-white font-semibold" : ""}`}
+                        >
+                            Projects
+                        </button>
+                        <button
+                            onClick={() => { ScrollToSection("skills", setMenuOpen); setActiveSection("skills"); }}
+                            className={`w-full text-left ${activeSection === "skills" ? "text-white font-semibold" : ""}`}
+                        >
+                            Skills
+                        </button>
+                        <button
+                            onClick={() => { ScrollToSection("skills", setMenuOpen); /* duplicate mobile label retained per your code */ setActiveSection("skills"); }}
+                            className={`w-full text-left ${activeSection === "skills" ? "text-white font-semibold" : ""} hidden md:block`}
+                        >
+                            Technical skills
+                        </button>
+                        <button
+                            onClick={() => { ScrollToSection("experience", setMenuOpen); setActiveSection("experience"); }}
+                            className={`w-full text-left ${activeSection === "experience" ? "text-white font-semibold" : ""}`}
+                        >
+                            Experience
+                        </button>
+                        <button
+                            onClick={() => { ScrollToSection("contact", setMenuOpen); setActiveSection("contact"); }}
+                            className={`w-full text-left ${activeSection === "contact" ? "text-white font-semibold" : ""}`}
+                        >
+                            Contact
+                        </button>
                     </nav>
                 </div>
             </div>
