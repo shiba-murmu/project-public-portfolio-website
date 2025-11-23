@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function ScrollToSection(id, closeMenu) {
+/**
+ * ScrollToSection now optionally accepts setActiveSection to immediately mark clicked section active.
+ */
+function ScrollToSection(id, closeMenu, setActiveSection) {
     const el = document.getElementById(id);
     const header = document.getElementById("site-header");
     if (!el) return;
@@ -8,15 +11,17 @@ function ScrollToSection(id, closeMenu) {
     const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
     window.scrollTo({ top, behavior: "smooth" });
 
+    if (typeof setActiveSection === "function") setActiveSection(id);
     if (closeMenu) closeMenu(false);
 }
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownHeight, setDropdownHeight] = useState(0); // for smooth max-height animation
-    const [activeSection, setActiveSection] = useState("Home");
+    const [activeSection, setActiveSection] = useState("home"); // normalized to lowercase
     const containerRef = useRef(null);
     const dropdownRef = useRef(null);
+    const observerRef = useRef(null);
 
     // Keep header space so fixed header doesn’t overlap content
     useEffect(() => {
@@ -65,22 +70,17 @@ function Header() {
 
         const el = dropdownRef.current;
         const measure = () => {
-            // measure the scrollHeight of the nav content
             const nav = el.querySelector("nav");
             if (!nav) return;
             const h = nav.scrollHeight;
-            // set a reasonable max (60vh) if content is tall
             const maxAllowed = Math.floor(window.innerHeight * 0.6);
             setDropdownHeight(Math.min(h, maxAllowed));
         };
 
-        // measure right away when opening
         if (menuOpen) {
             measure();
-            // also re-measure on resize (in case viewport changes)
             window.addEventListener("resize", measure);
         } else {
-            // closing -> set to 0 to animate
             setDropdownHeight(0);
         }
 
@@ -95,30 +95,61 @@ function Header() {
         const observerOptions = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.35, // when ~35% of section is visible
+            threshold: 0.3,
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const handleIntersections = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
+                    // entry.target.id is the section's id (already lowercase if you used lowercase)
                     setActiveSection(entry.target.id);
                 }
             });
-        }, observerOptions);
+        };
 
-        sections.forEach((id) => {
-            const el = document.getElementById(id);
-            if (el) observer.observe(el);
-        });
+        // If elements don't exist yet, retry for up to ~5 times spaced by 200ms
+        let attempts = 0;
+        const maxAttempts = 6;
+        let pollTimer = null;
 
-        return () => observer.disconnect();
+        const trySetupObserver = () => {
+            const found = sections
+                .map((id) => document.getElementById(id))
+                .filter(Boolean);
+
+            if (found.length > 0) {
+                // create and observe
+                observerRef.current = new IntersectionObserver(handleIntersections, observerOptions);
+                sections.forEach((id) => {
+                    const el = document.getElementById(id);
+                    if (el) observerRef.current.observe(el);
+                });
+            } else {
+                attempts += 1;
+                if (attempts < maxAttempts) {
+                    pollTimer = setTimeout(trySetupObserver, 200);
+                } else {
+                    // give up silently — sections probably mounted later by route; we could observe later
+                }
+            }
+        };
+
+        trySetupObserver();
+
+        return () => {
+            if (pollTimer) clearTimeout(pollTimer);
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+                observerRef.current = null;
+            }
+        };
     }, []);
 
     // helper to click + highlight
     const handleClick = (id) => {
-        // scroll (this closes mobile menu if setMenuOpen passed in)
-        ScrollToSection(id, setMenuOpen);
-        // set active immediately
+        // scroll (this closes mobile menu if setMenuOpen passed in) and mark active
+        ScrollToSection(id, setMenuOpen, setActiveSection);
+        // ensure immediate visual feedback even if scroll hasn't reached section yet
         setActiveSection(id);
     };
 
@@ -203,44 +234,44 @@ function Header() {
                 >
                     <nav className="flex flex-col items-center justify-center p-4 space-y-5 bg-(--footer-background) text-lg rounded-b-3xl">
                         <button
-                            onClick={() => { ScrollToSection("home", setMenuOpen); setActiveSection("home"); }}
-                            className={`w-full text-left ${activeSection === "Home" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("home", setMenuOpen, setActiveSection); }}
+                            className={`w-full text-center ${activeSection === "home" ? "text-white font-semibold" : ""}`}
                         >
                             Home
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("about", setMenuOpen); setActiveSection("about"); }}
-                            className={`w-full text-left ${activeSection === "About" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("about", setMenuOpen, setActiveSection); }}
+                            className={`w-full text-center ${activeSection === "about" ? "text-white font-semibold" : ""}`}
                         >
                             About me
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("project", setMenuOpen); setActiveSection("project"); }}
-                            className={`w-full text-left ${activeSection === "project" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("project", setMenuOpen, setActiveSection); }}
+                            className={`w-full text-center ${activeSection === "project" ? "text-white font-semibold" : ""}`}
                         >
                             Projects
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("skills", setMenuOpen); setActiveSection("skills"); }}
-                            className={`w-full text-left ${activeSection === "skills" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("skills", setMenuOpen, setActiveSection); }}
+                            className={`w-full hidden md:block text-center ${activeSection === "skills" ? "text-white font-semibold" : ""}`}
                         >
                             Skills
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("skills", setMenuOpen); /* duplicate mobile label retained per your code */ setActiveSection("skills"); }}
-                            className={`w-full text-left ${activeSection === "skills" ? "text-white font-semibold" : ""} hidden md:block`}
+                            onClick={() => { ScrollToSection("skills", setMenuOpen, setActiveSection); /* duplicate mobile label retained per your code */ }}
+                            className={`w-full text-center ${activeSection === "skills" ? "text-white font-semibold" : ""}  md:hidden`}
                         >
                             Technical skills
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("experience", setMenuOpen); setActiveSection("experience"); }}
-                            className={`w-full text-left ${activeSection === "experience" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("experience", setMenuOpen, setActiveSection); }}
+                            className={`w-full text-center ${activeSection === "experience" ? "text-white font-semibold" : ""}`}
                         >
                             Experience
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("contact", setMenuOpen); setActiveSection("contact"); }}
-                            className={`w-full text-left ${activeSection === "contact" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("contact", setMenuOpen, setActiveSection); }}
+                            className={`w-full text-center ${activeSection === "contact" ? "text-white font-semibold" : ""}`}
                         >
                             Contact
                         </button>
