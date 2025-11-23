@@ -23,12 +23,12 @@ function About() {
                                 className="text-sm md:text-lg text-(--muted-text)                                                                              md:flex-1 leading-relaxed text-center md:text-left"
 
                             >
-                                I'm <span className="font-extrabold heading-text text-xl md:text-2xl text-(--text-color)">{name} {lastName}</span> — a frontend engineer who loves building
+                                I'm <span className="font-extrabold text-md md:text-xl text-(--text-color)">{name} {lastName}</span> — a frontend engineer who loves building
                                 clean, fast and intuitive web experiences. I started coding during my B.Tech in Computer
                                 Science, and over time I found myself drawn toward creating polished user interfaces and
                                 solving real user-experience problems.
                                 <br /><br />
-                                I enjoy working with <span className="font-extrabold text-(--text-color)">React, Tailwind CSS, and Firebase</span>, and I’m always
+                                I enjoy working with <span className="font-extrabold text-md text-(--text-color)">React, Tailwind CSS, and Firebase</span>, and I’m always
                                 exploring tools that help create smoother and more human-friendly digital products. My focus
                                 is simple: build interfaces that are lightweight, responsive, and visually consistent —
                                 without unnecessary complexity.
