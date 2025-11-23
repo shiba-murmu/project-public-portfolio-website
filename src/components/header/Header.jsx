@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState , useEffect} from 'react';
 
 function ScrollToSection(id) {
     const el = document.getElementById(id);
@@ -12,10 +13,16 @@ function ScrollToSection(id) {
 
 
 function Header() {
+    const [name , setName] = useState('No name');
+    const [lastName , setLastName] = useState(null);
+    useState(() => {
+        setName('Bhawna');
+        setLastName('Chaudhary');
+    })
     return (
         <>
             <div id='site-header' className='sticky top-0 z-50 flex justify-between bg-(--bg-color) items-center shadow-md'>
-                <div className='py-3 md:py-4 pl-3 md:pl-15 text-2xl heading-text'>Shiba Murmu</div>
+                <div className='py-3 md:py-4 pl-3 md:pl-15 text-2xl heading-text'>{name} {lastName}</div>
                 <div className='md:hidden py-3 pr-3 cursor-pointer'>
                     {/* size of this svg is 42 in google icons */}
                     <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
