@@ -69,3 +69,27 @@ body {
 
 
 
+
+.myScroller::-webkit-scrollbar {
+  width: 3px;
+}
+
+.myScroller::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  /* height: 100vh; */
+}
+
+.myScroller::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}
