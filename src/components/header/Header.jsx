@@ -99,7 +99,7 @@ function Header() {
 
     // IntersectionObserver to update activeSection on scroll
     useEffect(() => {
-        const sections = ["home", "about", "project", "skills", "experience", "contact"];
+        const sections = ["home", "about", "project", "skills", "experience", "footer"];
         const observerOptions = {
             root: null,
             rootMargin: "0px",
@@ -222,8 +222,8 @@ function Header() {
                         Experience
                     </div>
                     <div
-                        onClick={() => handleClick("contact")}
-                        className={`cursor-pointer hover:text-(--text-color)  transition duration-300 ${activeSection === "contact" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        onClick={() => handleClick("footer")}
+                        className={`cursor-pointer hover:text-(--text-color)  transition duration-300 ${activeSection === "footer" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         Contact
                     </div>
@@ -278,8 +278,8 @@ function Header() {
                             Experience
                         </button>
                         <button
-                            onClick={() => { ScrollToSection("contact", setMenuOpen, setActiveSection); }}
-                            className={`w-full text-center ${activeSection === "contact" ? "text-white font-semibold" : ""}`}
+                            onClick={() => { ScrollToSection("footer", setMenuOpen, setActiveSection); }}
+                            className={`w-full text-center ${activeSection === "footer" ? "text-white font-semibold" : ""}`}
                         >
                             Contact
                         </button>

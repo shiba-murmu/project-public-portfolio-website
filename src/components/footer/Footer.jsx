@@ -10,7 +10,7 @@ function ScrollToSection(id) {
 function Footer() {
     return (
         <>
-            <div id='Footer' className='rounded-t-3xl p-5 py-15 pb-10 md:rounded-t-4xl md:flex md:flex-col md:gap-20 border-t border-(--border-color)  md:p-30 md:pb-10'>
+            <div id='footer' className='rounded-t-3xl  p-5 py-15 pb-10 md:rounded-t-4xl md:flex md:flex-col md:gap-20 border-t border-(--border-color)  md:p-30 md:pb-10'>
                 <div className='md:grid md:grid-cols-2 md:justify-center md:content-start'>
                     <div className='flex flex-col gap-4 md:flex md:flex-col md:gap-3'>
                         <section className='flex flex-col gap-3 md:flex md:flex-col md:gap-3'>
@@ -39,7 +39,7 @@ function Footer() {
                                 <li className='pl-2'><span onClick={() => { ScrollToSection('project') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Projects</span></li>
                                 <li className='pl-2'><span onClick={() => { ScrollToSection('skills') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Technical skills</span></li>
                                 <li className='pl-2'><span onClick={() => { ScrollToSection('experience') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Experience</span></li>
-                                <li className='pl-2'><span onClick={() => { ScrollToSection('contact') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Contact</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('footer') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Contact</span></li>
                             </ul>
                         </div>
                         <div className='my-4 md:my-0'>
