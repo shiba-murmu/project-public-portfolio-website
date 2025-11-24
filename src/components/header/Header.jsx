@@ -232,7 +232,7 @@ function Header() {
                 {/* MOBILE DROPDOWN — animated with max-height + opacity */}
                 <div
                     ref={dropdownRef}
-                    className="md:hidden absolute left-0 right-0 top-full z-50 shadow-lg bg-(--bg-color) transition-all duration-300 overflow-hidden"
+                    className="md:hidden absolute left-0 right-0 top-full z-50  shadow-lg border-b bg-(--bg-color) rounded-b-4xl border-(--muted-text)  transition-all duration-300 overflow-hidden"
                     // apply animated styles from state
                     style={{
                         maxHeight: dropdownHeight ? `${dropdownHeight}px` : 0,
@@ -240,7 +240,7 @@ function Header() {
                         transform: menuOpen ? "translateY(0)" : "translateY(-6px)",
                     }}
                 >
-                    <nav className="flex flex-col items-center justify-center p-4 space-y-5 bg-(--footer-background) text-lg rounded-b-3xl">
+                    <nav className="flex flex-col items-center justify-center p-4 pb-10 space-y-5  text-lg ">
                         <button
                             onClick={() => { ScrollToSection("home", setMenuOpen, setActiveSection); }}
                             className={`w-full text-center ${activeSection === "home" ? "text-white font-semibold" : ""}`}

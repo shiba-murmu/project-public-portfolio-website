@@ -98,7 +98,7 @@ function CustomHeader() {
         <div ref={containerRef} className="relative">
             <div
                 id="site-header"
-                className="fixed top-0 left-0 right-0 z-50 py-1 flex justify-between items-center shadow-md bg-(--bg-color)"
+                className="fixed top-0 left-0 right-0 z-50 py-1 flex justify-between items-center shadow-md bg-(--bg-color) transition duration-300 ease-in-out"
             >
                 {/* name */}
                 <div className="py-3 md:py-4 pl-3 md:pl-15 text-2xl ">Portfolio</div>
@@ -128,7 +128,7 @@ function CustomHeader() {
                 {/* MOBILE DROPDOWN — animated with max-height + opacity */}
                 <div
                     ref={dropdownRef}
-                    className="md:hidden absolute left-0 right-0 top-full z-50 shadow-lg bg-(--bg-color) transition-all duration-300 overflow-hidden"
+                    className="md:hidden absolute left-0 right-0 top-full z-50 shadow-lg bg-(--bg-color) border-b rounded-b-4xl transition-all border-(--muted-text)  duration-300 overflow-hidden"
                     // apply animated styles from state
                     style={{
                         maxHeight: dropdownHeight ? `${dropdownHeight}px` : 0,
@@ -136,7 +136,7 @@ function CustomHeader() {
                         transform: menuOpen ? "translateY(0)" : "translateY(-6px)",
                     }}
                 >
-                    <nav className="flex flex-col items-center justify-center p-4 space-y-5 bg-(--footer-background) text-lg rounded-b-3xl">
+                    <nav className="flex flex-col items-center justify-center p-4 space-y-5  text-lg">
                         <button onClick={() => toggleMenu()} className="w-full">Home</button>
                     </nav>
                 </div>
