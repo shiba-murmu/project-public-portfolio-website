@@ -1,5 +1,12 @@
 import React from 'react'
-
+function ScrollToSection(id) {
+    const el = document.getElementById(id);
+    const header = document.getElementById("site-header");
+    if (!el) return;
+    const headerHeight = header ? header.offsetHeight : 0;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+    window.scrollTo({ top, behavior: "smooth" });
+}
 function Footer() {
     return (
         <>
@@ -24,12 +31,12 @@ function Footer() {
                         <div>
                             <ul className='flex flex-col gap-3  md:flex md:flex-col md:gap-2'>
                                 <li className='text-(--muted-text) border-l pl-2 border-(--muted-text) rounded md:border-0 md:pl-0'>QUICK LINK</li>
-                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Home</span></li>
-                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>About me</span></li>
-                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Projects</span></li>
-                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Technical skills</span></li>
-                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Experience</span></li>
-                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Contact</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('home') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Home</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('about') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>About me</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('project') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Projects</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('skills') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Technical skills</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('experience') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Experience</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('contact') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Contact</span></li>
                             </ul>
                         </div>
                         <div className='my-4 md:my-0'>
