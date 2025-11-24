@@ -14,16 +14,16 @@ function Project_card_desktop({ orderOne, orderTwo , path }) {
                         <span className='text-2xl font-bold text-(--bluish)'>Hotel management system</span>
                     </div>
                     <div>
-                        <span className='font-extrabold text-xl'>Tech used : </span>
-                        <ul className='flex text-lg font-semibold pl-5 gap-1 text-(--muted-text)'>
+                        <span className='font-bold text-md'>Tech used : </span>
+                        <ul className='flex text-lg font-medium pl-5 gap-1 text-(--muted-text)'>
                             <li>Html,</li>
                             <li>CSS,</li>
                             <li>Javascript,</li>
                         </ul>
                     </div>
                     <div>
-                        <span className='font-extrabold text-xl'>Description : </span>
-                        <p className=' text-lg pl-5 text-(--muted-text)'>Project description goes here</p>
+                        <span className='font-bold text-md'>Description : </span>
+                        <p className=' text-lg font-medium pl-5 text-(--muted-text)'>Project description goes here</p>
                     </div>
                     <div className='flex w-full justify-start items-start space-x-4 mt-auto pt-3 pb-3 rounded-md text-(--button-text-color)'>
                         <Link to='/project-details'>
