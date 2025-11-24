@@ -17,7 +17,7 @@ function Footer() {
                             EMAIL ME AT
                         </section>
                         <section className='md:mt-4'>
-                            <span className='border p-3 rounded-full px-10 border-dashed border-(--exception-button-border)'>shibamurmu001@gmail.com</span>
+                            <span className='border p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>shibamurmu001@gmail.com</span>
                         </section>
                     </div>
                     <div className='md:grid md:grid-cols-2 md:justify-center md:content-start'>
