@@ -60,7 +60,7 @@ export default function Skills() {
                             </div>
 
                             <div className="mt-auto">
-                                <a href="#contact" className="inline-block px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-semibold shadow-md">Let's talk</a>
+                                <a href="#footer" className="inline-block px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-semibold shadow-md">Let's talk</a>
                             </div>
                         </div>
                     </div>
