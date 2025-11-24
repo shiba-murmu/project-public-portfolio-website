@@ -9,7 +9,7 @@ function Project_collection() {
                     <span className='text-2xl md:text-5xl font-bold border-b-2 border-(--muted-text) '>Projects collection</span>
                 </div>
                 <div className='md:hidden'>
-                    
+
                     {/* For mobile  */}
                     <Project_card />
                     <Project_card />
@@ -18,10 +18,24 @@ function Project_collection() {
                 </div>
                 <div className='hidden md:flex md:flex-col md:gap-40 w-full py-10 '>
                     {/* Designed for desktop screen */}
-                    <Project_card_desktop orderOne={1} orderTwo={2} path='https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322' />
-                    <Project_card_desktop orderOne={2} orderTwo={1} path='https://media.istockphoto.com/id/1335717953/photo/project-manager-working-on-computer-at-the-office-concept-with-icons-of-management-areas-such.jpg?s=612x612&w=0&k=20&c=HKKel0F9p7u9JL54sDOtYOuR1yVv81LA2ISHmuU7mdM=' />
-                    <Project_card_desktop orderOne={1} orderTwo={2} path='https://media.istockphoto.com/id/669853862/photo/business-people-analyzing-statistics-financial-concept.jpg?s=612x612&w=0&k=20&c=FRwOQxlu-_1COd2i1eR3O8zscscesdhaXvUODzoVmFg=' />
-                    <Project_card_desktop orderOne={2} orderTwo={1} path='https://waz.smartdraw.com/working-smarter/img/how-to-create-a-project-planning-map.svg?bn=15100111939' />
+                    {/* // image left (default) */}
+                    <Project_card_desktop
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Hotel Management System"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+
+                    {/* // image right (reverse) */}
+                    <Project_card_desktop
+                        reverse
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Hotel Management System"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+
+
                 </div>
             </div>
         </>

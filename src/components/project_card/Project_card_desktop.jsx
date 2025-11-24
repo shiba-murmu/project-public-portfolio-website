@@ -1,41 +1,97 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-function Project_card_desktop({ orderOne, orderTwo , path }) {
+// ProjectCard.jsx
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Project_card_desktop = ({
+    path,
+    title = "Project Title",
+    tech = ["HTML", "CSS", "JS"],
+    description = "Project description goes here",
+    reverse = false, // if true, image will be on the right on md+
+}) => {
+    // Order classes for grid children on md and up
+    const imgOrder = reverse ? "md:order-2" : "md:order-1";
+    const contentOrder = reverse ? "md:order-1" : "md:order-2";
+
     return (
-        <>
-            <div className='grid grid-cols-2 bg-(--footer-background) rounded-2xl items-center gap-30   px-20  h-[90vh] '>
-                <div style={{order : orderOne}} className='flex order-${orderOne}  justify-center items-center'>
-                    <img src={path}
-                        className=' object-contain h-full w-full'
-                        alt="" />
+        <div className="w-full h-[90vh] md:h-[60vh]">
+            <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 rounded-2xl border border-(--border-color) overflow-hidden">
+                {/* Image column */}
+                <div
+                    className={`${imgOrder} flex justify-center items-center bg-(--card-bg)`}
+                >
+                    <div className="w-full h-full max-h-full">
+                        {/* Use an aspect-ratio wrapper so images behave consistently */}
+                        <div className="h-full w-full">
+                            <img
+                                src={path}
+                                alt={title}
+                                className="h-full w-full object-cover object-center"
+                            // object-cover makes sure the image fills the column
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div style={{order : orderTwo}} className='flex order-${orderTwo} justify-center items-start flex-col'>
-                    <div className='border-b-2 shadow-md mb-3  border-(--muted-text) pb-2 '>
-                        <span className='text-2xl font-bold text-(--bluish)'>Hotel management system</span>
-                    </div>
-                    <div>
-                        <span className='font-bold text-md'>Tech used : </span>
-                        <ul className='flex text-lg font-medium pl-5 gap-1 text-(--muted-text)'>
-                            <li>Html,</li>
-                            <li>CSS,</li>
-                            <li>Javascript,</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <span className='font-bold text-md'>Description : </span>
-                        <p className=' text-lg font-medium pl-5 text-(--muted-text)'>Project description goes here</p>
-                    </div>
-                    <div className='flex w-full justify-start items-start space-x-4 mt-auto pt-3 pb-3 rounded-md text-(--button-text-color)'>
-                        <Link to='/project-details'>
-                            <button className='cursor-pointer bg-(--button-background) w-30   px-4 py-2 rounded-md'>Details</button>
+
+                {/* Content column */}
+                <div
+                    className={`${contentOrder} flex flex-col p-8 md:p-12 bg-(--footer-background)`}
+                >
+                    <header className="mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-(--bluish)">
+                            {title}
+                        </h2>
+                        <div className="mt-2 text-(--muted-text) text-sm md:text-base">
+                            <span className="font-semibold">Tech used:</span>
+                            <ul className="inline pl-3 ml-2 list-disc">
+                                {tech.map((t, i) => (
+                                    <li key={i} className="inline mr-2 list-inside">
+                                        {t}
+                                        {i < tech.length - 1 ? "," : ""}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </header>
+
+                    <main className="flex-grow">
+                        <p className="text-lg md:text-base text-(--muted-text) leading-relaxed">
+                            {description}
+                        </p>
+                    </main>
+
+                    <footer className="mt-6 flex gap-4">
+                        <Link to="/project-details" className="mt-auto">
+                            <button className="px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-semibold hover:shadow-lg">
+                                Details
+                            </button>
                         </Link>
-                        <button className= ' bg-(--button-background) cursor-pointer  px-4 py-2 w-30 rounded-md'>Code</button>
-                        <button className='cursor-pointer w-30 bg-(--button-background) px-4 py-2 rounded-md'>Live</button>
-                    </div>
+
+                        <a
+                            href="#"
+                            className="mt-auto"
+                        // replace href with your code url
+                        >
+                            <button className="px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-medium hover:shadow-lg">
+                                Code
+                            </button>
+                        </a>
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-auto"
+                        >
+                            <button className="px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-medium hover:shadow-lg">
+                                Live
+                            </button>
+                        </a>
+                    </footer>
                 </div>
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
-export default Project_card_desktop
+export default Project_card_desktop;
