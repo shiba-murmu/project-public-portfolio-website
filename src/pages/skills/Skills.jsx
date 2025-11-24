@@ -24,7 +24,7 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="min-h-screen py-16 px-6 md:px-12 bg-linear-to-b from-[rgba(10,12,20,0.6)] to-[rgba(8,10,16,0.9)] text-(--text-color) flex flex-col items-center"
+            className="min-h-screen py-16 px-6 md:px-12  text-(--text-color) flex flex-col items-center"
         >
             {/* Header */}
             <div className="w-full max-w-6xl">
@@ -32,7 +32,7 @@ export default function Skills() {
                     <div className="p-3 rounded-lg bg-(--button-background)  shadow-lg">
                         {/* simple badge icon */}
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="var(--button-text-color)" />
                         </svg>
                     </div>
 
