@@ -58,7 +58,7 @@ function Education() {
     }
     return (
         <>
-            <div className='min-h-screen mb-10 md:my-20  pt-10 md:pt-0 flex flex-col justify-start items-center gap-10'>
+            <div className='min-h-screen mb-10 md:my-20  pt-10 md:pt-0 flex flex-col justify-start items-center gap-3'>
                 <div className='flex justify-left w-[90%]  md:w-[75%] border-b-2 border-(--muted-text) pb-2'>
                     <span className='text-xl md:text-2xl font-bold'>Education details</span>
                 </div>
