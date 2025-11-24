@@ -32,11 +32,20 @@ function Education() {
         },
        
     ]
+
+
     const EducationCard = ({ degree, branch, institute, location, duration, cgpa, percentage , index }) => {
+        const justifyOptions = {
+            // For align the cards
+            left : 'justify-start',
+            center : 'justify-center',
+            right : 'justify-end'
+        }
+
         return (
             <>
 
-                <div className={`flex justify-${index % 2 === 0 ? 'start' : 'end'} w-[90%] md:mb-20  md:w-[75%]`}>
+                <div className={`flex  w-[90%] ${justifyOptions[index]}  md:mb-20  md:w-[75%]`}>
                     <div className='flex border w-full  md:w-1/2 rounded-2xl p-7 md:p-20 border-(--border-color) bg-(--footer-background) flex-col px-4  gap-2 flex-wrap'>
                         <span className='text-lg font-bold border-b border-(--exception-button-border)'>{degree}</span>
                         <span className='text-md font-light text-(--muted-text)'>Branch : <span className='text-(--text-color)'>
@@ -56,6 +65,7 @@ function Education() {
             </>
         )
     }
+
     return (
         <>
             <div className='min-h-screen mb-10 md:my-20  pt-10 md:pt-0 flex flex-col justify-start items-center gap-3'>
@@ -71,7 +81,7 @@ function Education() {
                     duration={data[0].duration}
                     cgpa={data[0].cgpa}
                     percentage={data[0].percentage} 
-                    index={0}/>
+                    index='left'/>
                 <EducationCard
                     degree={data[1].degree}
                     branch={data[1].branch}
@@ -80,7 +90,7 @@ function Education() {
                     duration={data[1].duration}
                     cgpa={data[1].cgpa}
                     percentage={data[1].percentage}
-                    index={1} />
+                    index='right' />
                 <EducationCard
                     degree={data[2].degree}
                     branch={data[2].branch}
@@ -89,7 +99,7 @@ function Education() {
                     duration={data[2].duration}
                     cgpa={data[2].cgpa}
                     percentage={data[2].percentage} 
-                    index={2}/>
+                    index='left' />
             </div>
         </>
     )
