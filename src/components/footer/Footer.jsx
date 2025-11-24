@@ -24,20 +24,21 @@ function Footer() {
                         <div>
                             <ul className='flex flex-col gap-3  md:flex md:flex-col md:gap-2'>
                                 <li className='text-(--muted-text) border-l pl-2 border-(--muted-text) rounded md:border-0 md:pl-0'>QUICK LINK</li>
-                                <li className='pl-2 '>Home</li>
-                                <li className='pl-2 '>About me</li>
-                                <li className='pl-2 '>Projects</li>
-                                <li className='pl-2 '>Technical skills</li>
-                                <li className='pl-2 '>Experience</li>
-                                <li className='pl-2 '>Contact</li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Home</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>About me</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Projects</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Technical skills</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Experience</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Contact</span></li>
                             </ul>
                         </div>
                         <div className='my-4 md:my-0'>
                             <ul className='flex flex-col gap-3 md:flex md:flex-col md:gap-2'>
                                 <li className='text-(--muted-text) border-l pl-2 md:pl-0 rounded md:border-0'>INFORMATION</li>
-                                <li className='pl-2'>Terms and service</li>
-                                <li className='pl-2'>Privacy policy</li>
-                                <li className='pl-2'>Cookie settings</li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Terms & services</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Privacy policy</span></li>
+                                <li className='pl-2'><span className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Cookie settings</span></li>
+
                             </ul>
                         </div>
                         <div className='my-4 flex flex-col justify-start items-center md:hidden gap-3'>

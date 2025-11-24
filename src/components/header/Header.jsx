@@ -193,37 +193,37 @@ function Header() {
                 <div className="hidden md:flex space-x-8 p-4 text-lg">
                     <div
                         onClick={() => handleClick("home")}
-                        className={`cursor-pointer transition duration-300 ${activeSection === "home" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        className={`cursor-pointer hover:text-(--text-color) transition duration-300 ${activeSection === "home" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         Home
                     </div>
                     <div
                         onClick={() => handleClick("about")}
-                        className={`cursor-pointer transition duration-300 ${activeSection === "about" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        className={`cursor-pointer hover:text-(--text-color)  transition duration-300 ${activeSection === "about" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         About me
                     </div>
                     <div
                         onClick={() => handleClick("project")}
-                        className={`cursor-pointer transition duration-300 ${activeSection === "project" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        className={`cursor-pointer hover:text-(--text-color)  transition duration-300 ${activeSection === "project" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         Projects
                     </div>
                     <div
                         onClick={() => handleClick("skills")}
-                        className={`cursor-pointer transition duration-300 ${activeSection === "skills" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        className={`cursor-pointer hover:text-(--text-color) transition duration-300 ${activeSection === "skills" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         Skills
                     </div>
                     <div
                         onClick={() => handleClick("experience")}
-                        className={`cursor-pointer transition duration-300 ${activeSection === "experience" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        className={`cursor-pointer hover:text-(--text-color)  transition duration-300 ${activeSection === "experience" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         Experience
                     </div>
                     <div
                         onClick={() => handleClick("contact")}
-                        className={`cursor-pointer transition duration-300 ${activeSection === "contact" ? "text-white font-semibold" : "text-(--muted-text)"} `}
+                        className={`cursor-pointer hover:text-(--text-color)  transition duration-300 ${activeSection === "contact" ? "text-white font-semibold" : "text-(--muted-text)"} `}
                     >
                         Contact
                     </div>
