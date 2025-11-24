@@ -13,10 +13,10 @@ function Footer() {
                             </span>
                         </section>
                         {/* Here one more section can be added to call the person directly */}
-                        <section className='text-(--muted-text)'>
+                        <section className=' hidden md:block text-(--muted-text)'>
                             EMAIL ME AT
                         </section>
-                        <section className='mt-2 md:mt-4'>
+                        <section className=' hidden md:block  mt-2 md:mt-4'>
                             <span className='border text-xs md:text-md p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>shibamurmu001@gmail.com</span>
                         </section>
                     </div>
@@ -39,6 +39,14 @@ function Footer() {
                                 <li className='pl-2'>Privacy policy</li>
                                 <li className='pl-2'>Cookie settings</li>
                             </ul>
+                        </div>
+                        <div className='my-4 flex flex-col justify-start items-center md:hidden gap-3'>
+                            <section className='text-(--muted-text)'>
+                                EMAIL ME AT
+                            </section>
+                            <section className='mt-2 md:mt-4'>
+                                <span className='border text-xs md:text-md p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>shibamurmu001@gmail.com</span>
+                            </section>
                         </div>
                     </div>
                 </div>
