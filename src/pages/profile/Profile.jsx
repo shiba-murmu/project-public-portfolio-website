@@ -38,7 +38,7 @@ function Profile() {
                         <div onClick={() => ScrollToSection('project')} className='cursor-pointer bg-(--button-background)  px-4 py-2 rounded-md transition duration-300 text-(--button-text-color)'>
                             View work
                         </div>
-                        <div onClick={() => ScrollToSection('contact')} className='cursor-pointer  border px-4 py-2 rounded-md border-(--border-color) text-(--button-text-color)  transition duration-300'>
+                        <div onClick={() => ScrollToSection('contact')} className='cursor-pointer  border px-4 py-2 rounded-md border-(--exception-button-border) text-(--exception-button-text) bg-(--exception-button-background)  transition duration-300'>
                             Contact
                         </div>
                     </div>
@@ -64,7 +64,7 @@ function Profile() {
                         <div onClick={() => ScrollToSection('project')} className='cursor-pointer  px-4 py-2 rounded-md transition bg-(--button-background) text-(--button-text-color)  duration-300'>
                             View work
                         </div>
-                        <div onClick={() => ScrollToSection('contact')} className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--border-color) text-(--button-text-color) hover:bg-(--border-color)  transition duration-300'>
+                        <div onClick={() => ScrollToSection('contact')} className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--exception-button-border) text-(--exception-button-text) hover:bg-(--border-color) bg-(--exception-button-background)  transition duration-300'>
                             Contact
                         </div>
                     </div>

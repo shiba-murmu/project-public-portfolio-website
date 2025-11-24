@@ -6,17 +6,21 @@ This file is used for global css here
 */
 
 :root {
-    --bg-color : #08080a;
-    --text-color : #aeaac0;
+    --bg-color : #000017;
+    --text-color : #eff2f6;
     /* For buttons */
-    --button-background : #815ed7;
-    --button-text-color : white;
-    --border-color : #35373d;
+    --button-background : #e8effd;
+    --button-text-color : #000017;
+    --border-color : #0e0f25;
+    /* Exception color */
+    --exception-button-background : #18182f;
+    --exception-button-text : var(--text-color);
+    --exception-button-border : #2c2c43;
     /* For long text */
-    --muted-text : #626262;
+    --muted-text : #8787ba;
     /* Footer background
      */
-     --footer-background : #17171c;
+     --footer-background : #18182f;
 }
 
 body {
