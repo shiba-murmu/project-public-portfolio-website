@@ -33,10 +33,10 @@ function Skills() {
                     {
                         data_box.map((item, index) => (
                             <div key={index}>
-                                <span className='text-md font-bold border-b border-(--muted-text) '>{item.title}</span>
-                                <ul className='pl-5 p-5 list-disc text-md font-normal text-(--muted-text)'>
+                                <span className='text-md md:text-lg  font-bold border-b border-(--muted-text) '>{item.title}</span>
+                                <ul className='pl-5 p-5 md:text-lg  list-disc text-md font-normal text-(--muted-text)'>
                                     {item.list.map((item, index) => (
-                                        <li key={index}>{item}</li>
+                                        <li className='mt-2'  key={index}>{item}</li>
                                     ))}
                                 </ul>
                             </div>

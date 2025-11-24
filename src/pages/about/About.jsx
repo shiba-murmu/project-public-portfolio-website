@@ -9,7 +9,7 @@ function About() {
     })
     return (
         <>
-            <div id='about' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start text-3xl font-semibold'>
+            <div id='about' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start  font-semibold'>
                 <div className=''>
                     {/* <Heading_text text='About me' /> */}
                     <Text text={'About me'} />
