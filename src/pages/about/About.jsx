@@ -9,7 +9,7 @@ function About() {
     })
     return (
         <>
-            <div id='about' className='min-h-screen pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start  font-semibold'>
+            <div id='about' className='min-h-screen pt-5 md:pt-40 rounded-t-full  md:pl-50 flex flex-col justify-center md:justify-start items-center md:items-start  font-semibold'>
                 <div className=''>
                     {/* <Heading_text text='About me' /> */}
                     <Text text={'About me'} />
@@ -20,7 +20,7 @@ function About() {
                     <section id="about" className="p-6 rounded-2xl" style={{ background: '' }}>
                         <div className="mt-3 md:flex md:flex-col md:gap-6">
                             <p
-                                className="text-sm md:text-lg text-(--muted-text)                                                                              md:flex-1 leading-relaxed text-center md:text-left"
+                                className="text-md md:text-lg text-(--muted-text)                                                                              md:flex-1  text-center md:text-left"
 
                             >
                                 I'm <span className="font-extrabold text-md md:text-xl text-(--text-color)">{name} {lastName}</span> — a frontend engineer who loves building
@@ -39,8 +39,8 @@ function About() {
                             </p>
 
                             <div className="mt-6 flex flex-col gap-2 justify-center items-center md:justify-start md:items-start md:mt-0 md:w-full">
-                                <h4 className="font-extrabold text-md md:text-3xl mb-2">Quick Facts</h4>
-                                <ol className=" text-(--muted-text) text-center md:text-start list-inside space-y-1 text-sm md:text-lg">
+                                <h4 className="font-extrabold text-2xl md:text-3xl mb-2">Quick Facts</h4>
+                                <ol className=" text-(--muted-text) text-center md:text-start list-inside space-y-1 text-md md:text-lg">
                                     <li>B.Tech in Computer Science</li>
                                     <li>2+ years of experience</li>
                                     <li>Passionate about UI/UX design</li>
