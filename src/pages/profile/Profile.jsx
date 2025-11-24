@@ -34,7 +34,7 @@ export default function Profile() {
                             className="w-full h-full object-cover"
                             loading="lazy"
                         />
-                        <div className="absolute left-2 bottom-2 z-50 bg-(--button-background)   text-(--button-text-color) text-xs px-3 py-1 rounded-full shadow">Available</div>
+                        <div className="absolute left-2 bottom-2  bg-(--button-background)   text-(--button-text-color) text-xs px-3 py-1 rounded-full shadow">Available</div>
                     </div>
 
                     <div className="text-center md:text-left">
