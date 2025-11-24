@@ -43,7 +43,7 @@ const Education = () => {
         return (
             <div className={`w-full flex flex-col md:flex-row items-stretch gap-6`}>
                 {/* content block */}
-                <div className={`flex-1 flex ${contentOrder} justify-${align === 'left' ? 'start' : 'end'}`}>
+                <div className={`flex-1 flex ${contentOrder} ${align === 'left' ? 'justify-start' : 'justify-end'}`}>
                     <div className="bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 md:p-10 w-full max-w-2xl shadow-sm hover:shadow-md transition-shadow">
                         <div className="flex items-start justify-between gap-4">
                             <div>
@@ -110,7 +110,7 @@ const Education = () => {
                 <div className="flex flex-col gap-8">
                     {data.map((item, idx) => (
                         <div key={idx} className="">
-                            <EducationCard item={item} align={idx % 2 === 0 ? 'left' : 'right'} />
+                            <EducationCard item={item} align={idx % 2 === 0 ? 'left' : 'end'} />
                         </div>
                     ))}
                 </div>

@@ -80,14 +80,16 @@ export default function Education_experience() {
 
                 {/* Tabs / heading */}
                 <div className='w-[90%] md:w-[75%] flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mt-4'>
-                    <div className='flex-1'>
-                        <h3 className='text-xl md:text-2xl font-bold'>Experience</h3>
-                        <p className='text-sm text-(--muted-text) mt-2'>Work history, projects and tech stacks — concise and scannable.</p>
-                    </div>
-
-                    <div className='flex gap-3 items-center'>
-                        <button className='px-3 py-1 rounded-md bg-(--button-background) text-(--button-text-color)'>Download CV</button>
-                        {/* <button onClick={() => document.getElementById('education-scroll')?.scrollIntoView({ behavior: 'smooth' })} className='px-3 py-1 rounded-md border border-(--border-color)'>Education</button> */}
+                    <div className="flex items-center gap-4 mb-6">
+                        <div className="p-3 rounded-lg bg-(--button-background) border border-(--border-color)">
+                            <svg width="28" height="28" className='animate-spin' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="var(--button-text-color)" />
+                            </svg>
+                        </div>
+                        <div className='flex-1'>
+                            <h3 className='text-xl md:text-2xl font-bold'>Experience</h3>
+                            <p className='text-sm text-(--muted-text) mt-2'>Work history, projects and tech stacks — concise and scannable.</p>
+                        </div>
                     </div>
                 </div>
 

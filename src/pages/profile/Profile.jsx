@@ -64,7 +64,7 @@ function Profile() {
                         <div onClick={() => ScrollToSection('project')} className='cursor-pointer  px-4 py-2 rounded-md transition bg-(--button-background) text-(--button-text-color)  duration-300'>
                             View work
                         </div>
-                        <div onClick={() => ScrollToSection('footer')} className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--exception-button-border) text-(--exception-button-text) hover:bg-(--border-color) bg-(--exception-button-background)  transition duration-300'>
+                        <div onClick={() => ScrollToSection('footer')} className='cursor-pointer  border px-4 py-2 rounded-md hover:shadow-md border-(--exception-button-border) text-(--exception-button-text) hover:bg-(--border-color) bg-(--footer-background)  transition duration-300'>
                             Contact
                         </div>
                     </div>
