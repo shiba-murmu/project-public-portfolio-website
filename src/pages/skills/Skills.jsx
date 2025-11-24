@@ -23,7 +23,7 @@ function Skills() {
     return (
         <>
             <div id='skills' className='min-h-screen flex justify-start flex-col items-center pt-10 font-bold  '>
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center md:justify-start md:pl-47 w-full'>
                     {/* <Heading_text text='Technical skills' /> */}
                     <Text text={'Technical skills'} />
                 </div>
