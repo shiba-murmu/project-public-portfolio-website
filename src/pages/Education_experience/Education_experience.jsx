@@ -78,7 +78,7 @@ function Education_experience() {
                 <div className='w-full md:pl-47 flex justify-center items-center md:justify-start'>
                     <Text text={'Education & Experience'} />
                 </div>
-                <div className='flex justify-left w-[90%]  md:w-[75%] border-b-2 border-(--border-color) pb-2'>
+                <div className='flex justify-left w-[90%]  md:w-[75%] border-b-2 border-(--muted-text) pb-2'>
                     <span className='text-xl md:text-2xl font-bold'>Experience</span>
                 </div>
                 <div className='hidden md:grid grid-cols-1 md:grid-cols-4 gap-5'>

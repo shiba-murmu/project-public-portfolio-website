@@ -27,16 +27,15 @@ function Skills() {
                     {/* <Heading_text text='Technical skills' /> */}
                     <Text text={'Technical skills'} />
                 </div>
-                <div className='pt-10 bg-(--footer-background) py-12 md:py-20 px-13 mt-10 rounded-2xl md:flex  md:space-x-40 justify-center items-center md:items-start'>
-
-
+                <div className='md:w-[90%] mt-10 grid grid-rows-1 gap-4 rounded-2xl md:grid md:grid-cols-4 md:gap-5  justify-center items-center md:items-start'>
                     {
                         data_box.map((item, index) => (
-                            <div key={index}>
-                                <span className='text-md md:text-lg  font-bold border-b border-(--muted-text) '>{item.title}</span>
-                                <ul className='pl-5 p-5 md:text-lg  list-disc text-md font-normal text-(--muted-text)'>
+                            <div className='flex flex-col h-full  md:h-full border my-5 min-h-60 border-(--border-color)  rounded-3xl p-9
+                            md:p-8 items-center md:items-start' key={index}>
+                                <span className='text-md md:text-lg  font-bold  border-(--muted-text) '>{item.title}</span>
+                                <ul className='pl-5 p-5 md:text-lg  md:not-checked:list-disc text-md font-normal text-(--muted-text)'>
                                     {item.list.map((item, index) => (
-                                        <li className='mt-2'  key={index}>{item}</li>
+                                        <li className='mt-2 text-center md:text-left'  key={index}>{item}</li>
                                     ))}
                                 </ul>
                             </div>

@@ -37,7 +37,7 @@ function Education() {
             <>
 
                 <div className={`flex justify-${index % 2 === 0 ? 'start' : 'end'} w-[90%] md:mb-20  md:w-[75%]`}>
-                    <div className='flex borde w-full md:w-1/2 rounded-2xl p-5 md:p-20 border-(--border-color) bg-(--footer-background) flex-col px-4  gap-2 flex-wrap'>
+                    <div className='flex border w-full  md:w-1/2 rounded-2xl p-7 md:p-20 border-(--border-color) bg-(--footer-background) flex-col px-4  gap-2 flex-wrap'>
                         <span className='text-lg font-bold border-b border-(--exception-button-border)'>{degree}</span>
                         <span className='text-md font-light text-(--muted-text)'>Branch : <span className='text-(--text-color)'>
                             {branch}
@@ -59,7 +59,7 @@ function Education() {
     return (
         <>
             <div className='min-h-screen mb-10 md:my-20  pt-10 md:pt-0 flex flex-col justify-start items-center gap-10'>
-                <div className='flex justify-left w-[90%]  md:w-[75%] border-b-2 border-(--border-color) pb-2'>
+                <div className='flex justify-left w-[90%]  md:w-[75%] border-b-2 border-(--muted-text) pb-2'>
                     <span className='text-xl md:text-2xl font-bold'>Education details</span>
                 </div>
                 <div></div>

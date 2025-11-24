@@ -10,7 +10,7 @@ function ScrollToSection(id) {
 function Footer() {
     return (
         <>
-            <div id='footer' className='rounded-t-3xl  p-5 py-15 pb-10 md:rounded-t-4xl md:flex md:flex-col md:gap-20 border-t border-(--border-color)  md:p-30 md:pb-10'>
+            <div id='footer' className='rounded-t-3xl  p-5 py-15 pb-10 md:rounded-t-4xl md:flex md:flex-col md:gap-20 border-t border-(--muted-text)  md:p-30 md:pb-10'>
                 <div className='md:grid md:grid-cols-2 md:justify-center md:content-start'>
                     <div className='flex flex-col gap-4 md:flex md:flex-col md:gap-3'>
                         <section className='flex flex-col gap-3 md:flex md:flex-col md:gap-3'>
