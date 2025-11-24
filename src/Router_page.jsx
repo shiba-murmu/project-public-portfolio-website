@@ -9,9 +9,11 @@ import CustomHeader from './components/header/CustomHeader.jsx';
 import Project_details from './pages/projects/project_detail/Project_details.jsx';
 function Router_page() {
     const location = useLocation();
-    const hideNavbarRoutes = ['/project-collections'];
+    const hideNavbarRoutes = ['/project-collections' , '/project-details'];
+    const hidefooterRoutes = ['/project-details', '/project-collections'];
 
     const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+    const shouldHideFooter = hidefooterRoutes.includes(location.pathname);
     return (
         <>
             {!shouldHideNavbar && <Header />}
@@ -22,7 +24,7 @@ function Router_page() {
                 <Route path='/project-collections' element={<Project_collection />} />
                 <Route path='/project-details' element={<Project_details />} />
             </Routes>
-            <Footer />
+            {!shouldHideFooter && <Footer />}
         </>
     )
 }
