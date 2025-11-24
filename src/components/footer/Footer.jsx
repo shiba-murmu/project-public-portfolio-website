@@ -23,19 +23,22 @@ function Footer() {
                         <section className=' hidden md:block text-(--muted-text)'>
                             EMAIL ME AT
                         </section>
-                        <section className=' hidden md:block  mt-2 md:mt-4'>
-                            <span className='border text-xs md:text-md p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>shibamurmu001@gmail.com</span>
-                        </section>
+                        <a href="mailto:shibamurmu001@gmail.com?subject=Hello&body=I%20want%20to%20hire%20you">
+
+                            <section className=' hidden md:block  mt-2 md:mt-4'>
+                                <span className='border text-xs md:text-md p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>shibamurmu001@gmail.com</span>
+                            </section>
+                        </a>
                     </div>
                     <div className='flex flex-col my-8 md:my-0 md:grid md:grid-cols-2 md:justify-center md:content-start'>
                         <div>
                             <ul className='flex flex-col gap-3  md:flex md:flex-col md:gap-2'>
                                 <li className='text-(--muted-text) border-l pl-2 border-(--muted-text) rounded md:border-0 md:pl-0'>QUICK LINK</li>
-                                <li className='pl-2'><span onClick={() => { ScrollToSection('home') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Home</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('home') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Home</span></li>
                                 <li className='pl-2'><span onClick={() => { ScrollToSection('about') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>About me</span></li>
-                                <li className='pl-2'><span onClick={() => { ScrollToSection('project') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Projects</span></li>
-                                <li className='pl-2'><span onClick={() => { ScrollToSection('skills') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Technical skills</span></li>
-                                <li className='pl-2'><span onClick={() => { ScrollToSection('experience') }}  className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Experience</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('project') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Projects</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('skills') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Technical skills</span></li>
+                                <li className='pl-2'><span onClick={() => { ScrollToSection('experience') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Experience</span></li>
                                 <li className='pl-2'><span onClick={() => { ScrollToSection('contact') }} className='hover:border-b hover:cursor-pointer hover:border-(--muted-text) hover:transition hover:duration-500 hover:text-(--muted-text)'>Contact</span></li>
                             </ul>
                         </div>
@@ -48,13 +51,18 @@ function Footer() {
 
                             </ul>
                         </div>
+                        {/* This will be visible at mobile view only */}
                         <div className='my-4 flex flex-col justify-start items-center md:hidden gap-3'>
                             <section className='text-(--muted-text)'>
                                 EMAIL ME AT
                             </section>
-                            <section className='mt-2 md:mt-4'>
-                                <span className='border text-xs md:text-md p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>shibamurmu001@gmail.com</span>
-                            </section>
+                            <a href="mailto:shibamurmu001@gmail.com?subject=Hello&body=I%20want%20to%20hire%20you">
+                                <section class='mt-2 md:mt-4'>
+                                    <span class='border text-xs md:text-md p-3 rounded-full px-10 border-dashed border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) transition duration-500 cursor-pointer'>
+                                        shibamurmu001@gmail.com
+                                    </span>
+                                </section>
+                            </a>
                         </div>
                     </div>
                 </div>
