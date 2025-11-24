@@ -150,7 +150,7 @@ function Education_experience() {
     return (
         // Main function codes here.
         <>
-            <div id='experience' className='min-h-screen  pt-10 md:pt-0 flex flex-col justify-start items-center gap-5'>
+            <div id='experience' className='pt-10 md:pt-0 flex flex-col justify-start items-center gap-5'>
                 <Experience_component />
             </div>
         </>
