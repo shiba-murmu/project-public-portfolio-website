@@ -57,7 +57,7 @@ function About() {
                                         <li>Open to freelance & full-time work</li>
                                     </ol>
                                     <div className='md:flex md:justify-center md:items-center'>
-                                        <ul className='text-md md:text-lg flex flex-wrap gap-3 '>
+                                        <ul className='text-md md:text-md font-normal flex flex-wrap gap-3 '>
                                             <li className='px-3 border bg-(--button-background) text-(--button-text-color) rounded-full'>React</li>
                                             <li className='px-3 border bg-(--button-background) text-(--button-text-color) rounded-full'>Tailwind CSS</li>
                                             <li className='px-3 border bg-(--button-background) text-(--button-text-color) rounded-full'>Git</li>
