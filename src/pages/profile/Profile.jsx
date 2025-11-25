@@ -9,7 +9,7 @@ export default function Profile() {
     useEffect(() => {
         setName('Bhawna')
         setLastName('Chaudhary')
-        setProfession('Frontend Developer')
+        setProfession('Web Developer')
     }, [])
 
     function scrollToSection(id) {

@@ -18,7 +18,7 @@ function scrollToSection(id) {
 export default function Footer() {
     const [copied, setCopied] = useState(false);
 
-    const email = "shibamurmu001@gmail.com";
+    const email = "bhawnachodhary003@gmail.com";
 
     const handleCopyEmail = async () => {
         try {
@@ -66,7 +66,7 @@ export default function Footer() {
                             </button>
 
                             <a
-                                className="md:hidden inline-flex items-center gap-3 px-6 py-2 rounded-full border border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) focus:outline-none focus:ring-2 focus:ring-(--exception-button-border)"
+                                className="md:hidden inline-flex items-center gap-3 px-6 py-2 rounded-full border border-(--exception-button-border) bg-(--exception-button-background) hover:bg-(--bg-color) focus:outline-none focus:ring-2 focus:ring-(--exception-button-border) text-sm"
                                 href={`mailto:${email}?subject=Hello&body=I%20want%20to%20hire%20you`}
                                 aria-label="Send email"
                             >
