@@ -21,16 +21,48 @@ function Project_collection() {
                     {/* // image left (default) */}
                     <Project_card_desktop
                         path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
-                        title="Hotel Management System"
+                        title="Career Lift system"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+                    <Project_card_desktop
+                        reverse
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Career Lift system"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+                    <Project_card_desktop
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Career Lift System"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+                    <Project_card_desktop
+                        reverse
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Career Lift System"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+                    <Project_card_desktop
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Career Lift System"
+                        tech={["HTML", "CSS", "JavaScript"]}
+                        description="A hotel management project with room booking, admin dashboard and responsive UI."
+                    />
+                    <Project_card_desktop
+                        reverse
+                        path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
+                        title="Career Lift System"
                         tech={["HTML", "CSS", "JavaScript"]}
                         description="A hotel management project with room booking, admin dashboard and responsive UI."
                     />
 
                     {/* // image right (reverse) */}
                     <Project_card_desktop
-                        reverse
                         path="https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322"
-                        title="Hotel Management System"
+                        title="Career Lift System"
                         tech={["HTML", "CSS", "JavaScript"]}
                         description="A hotel management project with room booking, admin dashboard and responsive UI."
                     />
