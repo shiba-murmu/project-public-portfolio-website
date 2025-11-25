@@ -7,10 +7,11 @@ import Home from './pages/home/Home'
 import Project_collection from './pages/projects/Project_list.jsx/Project_collection.jsx';
 import CustomHeader from './components/header/CustomHeader.jsx';
 import Project_details from './pages/projects/project_detail/Project_details.jsx';
+import Admin_login from './admin/Admin_login.jsx';
 function Router_page() {
     const location = useLocation();
-    const hideNavbarRoutes = ['/project-collections' , '/project-details'];
-    const hidefooterRoutes = ['/project-details', '/project-collections'];
+    const hideNavbarRoutes = ['/project-collections' , '/project-details', '/admin-dashboard/admin-profile/login'];
+    const hidefooterRoutes = ['/project-details', '/project-collections', '/admin-dashboard/admin-profile/login'];
 
     const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
     const shouldHideFooter = hidefooterRoutes.includes(location.pathname);
@@ -23,6 +24,7 @@ function Router_page() {
                 <Route path="/" element={<Home />} />
                 <Route path='/project-collections' element={<Project_collection />} />
                 <Route path='/project-details' element={<Project_details />} />
+                <Route path='/admin-dashboard/admin-profile/login' element={ <Admin_login />} />
             </Routes>
             {!shouldHideFooter && <Footer />}
         </>
