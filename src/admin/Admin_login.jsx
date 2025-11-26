@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Admin_login() {
     const [showPassword, setShowPassword] = React.useState(false);
     const [isSelect, setIsSelect] = useState(true);
     // true = User selected by default
+
+    const navigate = useNavigate();
+
+    
 
 
     return (
@@ -154,6 +159,8 @@ function Admin_login() {
               /* we keep color usage to CSS variables only (no hardcoded hex) */}
                             <button
                                 type="submit"
+                                onClick={() => {
+                                    navigate("/admin-dashboard");}}
                                 className="mt-4 w-full py-3 rounded-2xl font-semibold cursor-pointer"
                                 style={{
                                     backgroundColor: "var(--button-background)",
