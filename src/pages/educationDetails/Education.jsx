@@ -57,7 +57,7 @@ const Education = () => {
 
                         <div className="mt-4 flex flex-wrap gap-3 items-center">
                             <Badge>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
                                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
                                 </svg>
                                 <span className="text-sm">CGPA: {item.cgpa}</span>
@@ -96,9 +96,9 @@ const Education = () => {
         <section className="min-h-screen py-12 flex flex-col items-center">
             <div className="w-[90%] md:w-[75%]">
                 <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-lg bg-[rgba(255,255,255,0.03)] border border-(--border-color)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
+                    <div className="p-3 rounded-lg bg-(--button-background) border border-(--border-color)">
+                        <svg width="28" height="28" className='animate-spin' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="var(--button-text-color)" />
                         </svg>
                     </div>
                     <div>

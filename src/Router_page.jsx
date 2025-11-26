@@ -10,8 +10,8 @@ import Project_details from './pages/projects/project_detail/Project_details.jsx
 import Admin_login from './admin/Admin_login.jsx';
 function Router_page() {
     const location = useLocation();
-    const hideNavbarRoutes = ['/project-collections' , '/project-details', '/admin-dashboard/admin-profile/login'];
-    const hidefooterRoutes = ['/project-details', '/project-collections', '/admin-dashboard/admin-profile/login'];
+    const hideNavbarRoutes = ['/project-collections' , '/project-details', '/admin-and-users'];
+    const hidefooterRoutes = ['/project-details', '/project-collections', '/admin-and-users'];
 
     const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
     const shouldHideFooter = hidefooterRoutes.includes(location.pathname);
