@@ -24,7 +24,7 @@ function Router_page() {
                 <Route path="/" element={<Home />} />
                 <Route path='/project-collections' element={<Project_collection />} />
                 <Route path='/project-details' element={<Project_details />} />
-                <Route path='/admin-dashboard/admin-profile/login' element={ <Admin_login />} />
+                <Route path='/admin-and-users' element={ <Admin_login />} />
             </Routes>
             {!shouldHideFooter && <Footer />}
         </>

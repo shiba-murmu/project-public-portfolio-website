@@ -12,6 +12,7 @@ export default function Profile() {
         setProfession('Web Developer')
     }, [])
 
+
     function scrollToSection(id) {
         const el = document.getElementById(id)
         const header = document.getElementById('site-header')
@@ -78,7 +79,7 @@ export default function Profile() {
                         </p>
 
                         <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
-                            <a href="/resume.pdf" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-medium">
+                            <a href="/" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-medium">
                                 Resume
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v4h-4V3H6v18h12V3h-4zM9 7h6v2H9V7zm-2 8h10v2H7v-2z" /></svg>
                             </a>
