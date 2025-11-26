@@ -159,3 +159,51 @@ Spin animation code.
   border-color: var(--button-background);
   transition: box-shadow 0.18s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Tables colors */
+
+/* soft shadow & button hover using your variables - no color values changed */
+.shadow-soft {
+  box-shadow: 0 6px 18px rgba(11, 14, 22, 0.06);
+}
+
+.shadow-button {
+  box-shadow: 0 6px 20px rgba(11, 14, 22, 0.08);
+  transition: transform .14s ease, box-shadow .14s ease, opacity .12s ease;
+}
+
+.shadow-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11, 14, 22, 0.12);
+}
+
+/* card subtle border + adaptive background */
+.bg-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* mobile-friendly hit area for buttons */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* utility: subtle glass on supported devices (uses your variables only) */
+.backdrop-blur-sm {
+  backdrop-filter: blur(6px);
+}
+
+/* responsiveness tweak for very small screens */
+@media (max-width: 420px) {
+  .min-h-screen { padding-left: 12px; padding-right: 12px; }
+  .h-5 { width: 1.1rem; height: 1.1rem; }
+}
