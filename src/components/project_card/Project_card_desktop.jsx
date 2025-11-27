@@ -1,6 +1,7 @@
 // ProjectCard.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import useAos from "../../hooks/useAos"; // <- added
 
 const Project_card_desktop = ({
     path,
@@ -9,16 +10,26 @@ const Project_card_desktop = ({
     description = "Project description goes here",
     reverse = false, // if true, image will be on the right on md+
 }) => {
+    // initialize AOS
+    useAos({ duration: 700, easing: "ease-out", once: true }, []);
+
     // Order classes for grid children on md and up
     const imgOrder = reverse ? "md:order-2" : "md:order-1";
     const contentOrder = reverse ? "md:order-1" : "md:order-2";
 
     return (
-        <div className="w-full h-[90vh] md:h-[60vh]">
+        <div
+            className="w-full h-[90vh] md:h-[60vh]"
+            data-aos="fade-up"
+            data-aos-delay="80"
+        >
             <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 rounded-2xl border border-(--border-color) overflow-hidden">
                 {/* Image column */}
                 <div
                     className={`${imgOrder} flex justify-center items-center bg-(--card-bg)`}
+                    data-aos="zoom-in"
+                    data-aos-delay="140"
+                    data-aos-duration="900"
                 >
                     <div className="w-full h-full max-h-full">
                         {/* Use an aspect-ratio wrapper so images behave consistently */}
@@ -36,6 +47,8 @@ const Project_card_desktop = ({
                 {/* Content column */}
                 <div
                     className={`${contentOrder} flex flex-col p-8 md:p-12 bg-(--footer-background)`}
+                    data-aos="fade-up"
+                    data-aos-delay="220"
                 >
                     <header className="mb-4">
                         <h2 className="text-2xl md:text-3xl font-bold text-(--bluish)">
