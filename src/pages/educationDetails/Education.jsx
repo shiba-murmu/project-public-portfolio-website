@@ -1,6 +1,10 @@
 import React from 'react'
+import useAos from '../../hooks/useAos' // added AOS hook
 
 const Education = () => {
+    // init AOS
+    useAos({ duration: 700, easing: 'ease-out', once: true }, [])
+
     const data = [
         {
             degree: "Bachelor of Technology",
@@ -41,10 +45,10 @@ const Education = () => {
         const timelineOrder = align === 'left' ? 'md:order-2' : 'md:order-1'
 
         return (
-            <div className={`w-full flex flex-col md:flex-row items-stretch gap-6`}>
+            <div className={`w-full flex flex-col md:flex-row items-stretch gap-6`} data-aos="fade-up" data-aos-delay="120">
                 {/* content block */}
                 <div className={`flex-1 flex ${contentOrder} ${align === 'left' ? 'justify-start' : 'justify-end'}`}>
-                    <div className="bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 md:p-10 w-full max-w-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 md:p-10 w-full max-w-2xl shadow-sm hover:shadow-md transition-shadow" data-aos="fade-right" data-aos-delay="180">
                         <div className="flex items-start justify-between gap-4">
                             <div>
                                 <h3 className="text-xl md:text-2xl font-bold">{item.degree}</h3>
@@ -78,7 +82,7 @@ const Education = () => {
                 </div>
 
                 {/* timeline dot + line (only visible on md+) */}
-                <div className={`hidden md:flex flex-col items-center ${timelineOrder} w-20`}>
+                <div className={`hidden md:flex flex-col items-center ${timelineOrder} w-20`} data-aos="zoom-in" data-aos-delay="240">
                     <div className="relative h-full flex flex-col items-center justify-center">
                         <div className="w-1 h-full bg-(--border-color) rounded-md absolute top-0" />
                         <div className="relative z-10 bg-(--button-background) w-12 h-12 rounded-full border border-(--border-color) flex items-center justify-center shadow-sm">
@@ -93,9 +97,9 @@ const Education = () => {
     }
 
     return (
-        <section className="min-h-screen py-12 flex flex-col items-center">
+        <section className="min-h-screen py-12 flex flex-col items-center" data-aos="fade-up" data-aos-delay="80">
             <div className="w-[90%] md:w-[75%]">
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-6" data-aos="fade-right" data-aos-delay="100">
                     <div className="p-3 rounded-lg bg-(--button-background) border border-(--border-color)">
                         <svg width="28" height="28" className='animate-spin' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="var(--button-text-color)" />
