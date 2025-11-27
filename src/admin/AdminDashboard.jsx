@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import UserProfileData from "./UserProfileData";
 import UserAboutMeData from "./UserAboutMeData";
-
+import UserMyWorkData from "./UserMyWorkData";
+import UserTechnicalSkillData from "./UserTechnicalSkillData";
+import UserExperienceData from "./UserExperienceData";
+import UserEducationData from "./UserEducationData";
+import FooterData from "./FooterData";
 
 function UserProject() {
     <>
@@ -298,12 +302,23 @@ export default function AdminDashboard() {
                         {/* User about me section data */}
                         <UserAboutMeData />
                     </section>
-                    <section>
-                        
+                    <section className="w-full">
+                        <UserMyWorkData />
+                    </section>
+                    <section className="w-full">
+                        <UserTechnicalSkillData />
+                    </section>
+                    <section className="w-full">
+                        <UserExperienceData />
+                    </section>
+                    <section className="w-full">
+                        <UserEducationData />
+                    </section>
+                    <section className="w-full">
+                        <FooterData />
                     </section>
                 </div>
             </div>
-
         </div>
     );
 }
