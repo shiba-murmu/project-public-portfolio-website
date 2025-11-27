@@ -1,27 +1,11 @@
 import React from 'react'
 import Text from '../../components/customtext/Text'
 import { Link } from 'react-router-dom'
+import useAos from '../../hooks/useAos' // added AOS hook
 
 export default function Education_experience() {
-
-    const Education_detail = [
-        {
-            Institution: 'Generix Info Tech',
-            Degree: 'Web development',
-            Description: 'Full stack web development course',
-            Time_period: '12/03/2023 to  12/04/2023',
-            address: 'TATA'
-        },
-
-        {
-            Institution: 'Generix Info Tech',
-            Degree: 'Web development',
-            Description: 'Full stack web development course',
-            Time_period: '12/03/2023 to  12/04/2023',
-            address: 'TATA'
-        },
-    ]
-
+    // initialize AOS
+    useAos({ duration: 700, easing: 'ease-out', once: true }, [])
 
     const data = [
         {
@@ -74,14 +58,14 @@ export default function Education_experience() {
     const Experience_component = () => {
         return (
             <>
-                <div className='w-full md:pl-40 flex justify-center items-center md:justify-start'>
+                <div className='w-full md:pl-40 flex justify-center items-center md:justify-start' data-aos="fade-right" data-aos-delay="80">
                     <Text text={'Education & Experience'} />
                 </div>
 
                 {/* Tabs / heading */}
                 <div className='w-[90%] md:w-[75%] flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mt-4'>
-                    <div className="flex items-center gap-4 mb-6">
-                        <div className="p-3 rounded-lg bg-(--button-background) border border-(--border-color)">
+                    <div className="flex items-center gap-4 mb-6" data-aos="fade-up" data-aos-delay="140">
+                        <div className="p-3 rounded-lg bg-(--button-background) border border-(--border-color)" data-aos="zoom-in" data-aos-delay="180">
                             <svg width="28" height="28" className='animate-spin' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="var(--button-text-color)" />
                             </svg>
@@ -104,7 +88,12 @@ export default function Education_experience() {
                             <div className='relative pl-6'>
                                 <div className='absolute left-3 top-0 bottom-0 w-0.5 bg-(--border-color) rounded'></div>
                                 {data.map((_, i) => (
-                                    <div key={i} className='relative mb-8 ml-0'>
+                                    <div
+                                        key={i}
+                                        className='relative mb-8 ml-0'
+                                        data-aos="fade-right"
+                                        data-aos-delay={200 + i * 60}
+                                    >
                                         <div className='w-6 h-6 rounded-full bg-(--button-background) border border-(--border-color) flex items-center justify-center text-xs text-(--button-text-color)'>
                                             {i + 1}
                                         </div>
@@ -120,7 +109,12 @@ export default function Education_experience() {
                     {/* Cards grid */}
                     <div className='col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6'>
                         {data.map((item, index) => (
-                            <article key={index} className='flex flex-col bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 min-h-[220px] hover:shadow-lg transition-shadow'>
+                            <article
+                                key={index}
+                                className='flex flex-col bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 min-h-[220px] hover:shadow-lg transition-shadow'
+                                data-aos="fade-up"
+                                data-aos-delay={220 + index * 80}
+                            >
                                 <header className='flex items-start justify-between gap-4'>
                                     <div>
                                         <h4 className='text-lg font-bold'>{item.Company}</h4>
@@ -136,17 +130,14 @@ export default function Education_experience() {
                                 <footer className='mt-4 flex items-center justify-between gap-4'>
                                     <div className='flex flex-wrap gap-2'>
                                         {item.tect_stack.slice(0, 6).map((t, i) => (
-                                            <Chip key={i}>{t}</Chip>
+                                            <Chip
+                                                key={i}
+                                            >
+                                                <span data-aos="fade-left" data-aos-delay={300 + index * 50 + i * 30}>{t}</span>
+                                            </Chip>
                                         ))}
                                         {item.tect_stack.length > 6 && <span className='text-sm text-(--muted-text)'>+{item.tect_stack.length - 6}</span>}
                                     </div>
-
-                                    {/* <div className='flex gap-2'>
-                                        <Link to='/project-details'>
-                                            <button className='px-3 py-1 rounded-md bg-(--button-background) text-(--button-text-color)'>Details</button>
-                                        </Link>
-                                        <button className='px-3 py-1 rounded-md border border-(--border-color) text-sm'>Apply</button>
-                                    </div> */}
                                 </footer>
                             </article>
                         ))}
@@ -157,7 +148,12 @@ export default function Education_experience() {
                 <div className='md:hidden w-full mt-6'>
                     <div className='no-scrollbar w-full px-1 overflow-x-auto overflow-y-hidden whitespace-nowrap scrollbar-hide'>
                         {data.map((item, index) => (
-                            <div key={index} className='inline-block align-top w-80 h-96 bg-(--footer-background) text-white rounded-xl m-2 p-4 shrink-0'>
+                            <div
+                                key={index}
+                                className='inline-block align-top w-80 h-96 bg-(--footer-background) text-white rounded-xl m-2 p-4 shrink-0'
+                                data-aos="fade-up"
+                                data-aos-delay={260 + index * 80}
+                            >
                                 <div className='flex flex-col h-full'>
                                     <div>
                                         <h3 className='text-lg font-bold border-b border-(--muted-text) pb-2'>{item.Company}</h3>
@@ -171,7 +167,14 @@ export default function Education_experience() {
                                     <div className='mt-auto text-sm'>
                                         <div className='flex flex-wrap gap-2 mt-2'>
                                             {item.tect_stack.slice(0, 6).map((t, i) => (
-                                                <span key={i} className='px-2 py-1 rounded-md text-xs bg-[rgba(255,255,255,0.02)] border border-(--border-color)'>{t}</span>
+                                                <span
+                                                    key={i}
+                                                    className='px-2 py-1 rounded-md text-xs bg-[rgba(255,255,255,0.02)] border border-(--border-color)'
+                                                    data-aos="fade-right"
+                                                    data-aos-delay={320 + index * 50 + i * 30}
+                                                >
+                                                    {t}
+                                                </span>
                                             ))}
                                         </div>
 
@@ -185,26 +188,6 @@ export default function Education_experience() {
                         ))}
                     </div>
                 </div>
-
-                {/* Education section anchor */}
-                {/* <div id='education-scroll' className='w-full mt-10'>
-                    <div className='w-[90%] md:w-[75%]'>
-                        <h3 className='text-xl font-bold'>Education</h3>
-                        <div className='mt-4 grid grid-cols-1 md:grid-cols-2 gap-6'>
-                            {Education_detail.map((ed, i) => (
-                                <div key={i} className='bg-(--footer-background) border border-(--border-color) rounded-2xl p-6'>
-                                    <h4 className='text-lg font-semibold'>{ed.Institution}</h4>
-                                    <div className='text-sm text-(--muted-text) mt-1'>{ed.Degree} • {ed.Time_period}</div>
-                                    <p className='mt-3 text-(--muted-text)'>{ed.Description}</p>
-                                    <div className='mt-4'>
-                                        <span className='text-sm text-(--muted-text)'>Address: </span>
-                                        <span className='font-light'>{ed.address}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div> */}
             </>
         )
     }
