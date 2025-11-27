@@ -28,7 +28,7 @@ function UserProfileData() {
                             <td class="p-3">I can do better works here</td>
                             <td class="p-3">some small text</td>
                             <td class="p-3">12/02/2023</td>
-                            <td class="p-3">User</td>
+                            <td class="p-3">resume.pdf</td>
                             <td class="p-3">
                                 <button className="bg-amber-500 py-2 px-3 rounded text-xs cursor-pointer">
                                     Update
@@ -42,7 +42,7 @@ function UserProfileData() {
                             <td class="p-3">alice@example.com</td>
                             <td class="p-3">alskdflasdf3242</td>
                             <td class="p-3">12/02/2023</td>
-                            <td class="p-3">User</td>
+                            <td class="p-3">resume.pdf</td>
                             <td class="p-3">
                                 <button className="bg-amber-500 py-2 px-3 rounded text-xs cursor-pointer">
                                     update
