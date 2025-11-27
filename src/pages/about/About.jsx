@@ -87,7 +87,7 @@ function About() {
                                 </h4>
 
                                 <div className="md:flex md:justify-center md:items-start">
-                                    <ol className="text-(--muted-text) md:text-start list-inside space-y-1 text-md md:text-lg">
+                                    <ol className="text-(--muted-text) md:text-start list-inside space-y-1 text-md md:text-lg md:flex md:flex-col">
                                         {[
                                             'B.Tech in Computer Science',
                                             '2+ years of experience',
