@@ -11,6 +11,7 @@ import Admin_login from './admin/Admin_login.jsx';
 import AdminDashboard from './admin/AdminDashboard.jsx';
 import Admin_add from './admin/Admin_add.jsx';
 import Add_user from './admin/Add_user.jsx';
+import UserDashboard from './user/UserDashboard.jsx';
 function Router_page() {
     const location = useLocation();
     const hideNavbarRoutes = [
@@ -20,6 +21,7 @@ function Router_page() {
         '/admin-dashboard',
         '/add-admin',
         '/add-user',
+        '/user-dashboard',
     ];
 
     const hidefooterRoutes = [
@@ -29,6 +31,7 @@ function Router_page() {
         '/admin-dashboard',
         '/add-admin',
         '/add-user',
+        '/user-dashboard',
     ];
 
     const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
@@ -46,6 +49,7 @@ function Router_page() {
                 <Route path='/admin-dashboard' element={<AdminDashboard />} />
                 <Route path='/add-admin' element={<Admin_add />} />
                 <Route path='/add-user' element={<Add_user />} />
+                <Route path='/user-dashboard' element={<UserDashboard />} />
             </Routes>
             {!shouldHideFooter && <Footer />}
         </>

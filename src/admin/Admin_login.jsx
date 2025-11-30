@@ -5,10 +5,17 @@ function Admin_login() {
     const [showPassword, setShowPassword] = React.useState(false);
     const [isSelect, setIsSelect] = useState(true);
     // true = User selected by default
-
+    console.log(isSelect);
     const navigate = useNavigate();
 
-    
+    const Redirect = () => {
+        if (isSelect) {
+            navigate('/user-dashboard')
+        } else {
+            navigate('/admin-dashboard')
+        }
+    }
+
 
 
     return (
@@ -160,7 +167,8 @@ function Admin_login() {
                             <button
                                 type="submit"
                                 onClick={() => {
-                                    navigate("/admin-dashboard");}}
+                                    Redirect();
+                                }}
                                 className="mt-4 w-full py-3 rounded-2xl font-semibold cursor-pointer"
                                 style={{
                                     backgroundColor: "var(--button-background)",
