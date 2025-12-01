@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 function ScrollToSection(id, closeMenu) {
     const el = document.getElementById(id);
     const header = document.getElementById("site-header");
@@ -17,6 +17,23 @@ function CustomHeader() {
     const dropdownRef = useRef(null);
 
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const Paths = [
+        '/admin-and-users',
+        '/admin-dashboard',
+        '/add-admin',
+        '/add-user',
+        '/user-dashboard',
+    ]
+
+
+    const [isPathMatch, setIsPathMatch] = useState(false);
+
+    useEffect(() => {
+        setIsPathMatch(Paths.includes(location.pathname));
+    }, [location.pathname]);
+
 
     function toggleMenu() {
         // This function will redirect to home page.
@@ -95,53 +112,58 @@ function CustomHeader() {
     }, [menuOpen]);
 
     return (
-        <div ref={containerRef} className="relative">
-            <div
-                id="site-header"
-                className="fixed top-0 left-0 right-0 z-50 py-1 flex justify-between items-center shadow-md bg-(--bg-color) transition duration-300 ease-in-out"
-            >
-                {/* name */}
-                <div className="py-3 md:py-4 pl-3 md:pl-15 text-2xl ">Portfolio</div>
-
-                {/* hamburger icon */}
-                <button
-                    aria-label="Toggle menu"
-                    aria-expanded={menuOpen}
-                    onClick={() => setMenuOpen((s) => !s)}
-                    className="md:hidden py-3 pr-3 w-12 h-12 flex items-center justify-center"
-                    type="button"
-                >
-                    {menuOpen ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="fill-(--text-color) hover:fill-white transition duration-300" height="34" viewBox="0 -960 960 960" width="34">
-                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                        </svg>
-                    ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34" className="fill-(--text-color) hover:fill-white transition duration-300">
-                            <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
-                        </svg>
-                    )}
-                </button>
-
-                {/* desktop menu */}
-                
-
-                {/* MOBILE DROPDOWN — animated with max-height + opacity */}
+        <>
+            <div ref={containerRef} className="relative">
                 <div
-                    ref={dropdownRef}
-                    className="md:hidden absolute left-0 right-0 top-full z-50 shadow-lg bg-(--bg-color) border-b rounded-b-4xl transition-all border-(--muted-text)  duration-300 overflow-hidden"
-                    // apply animated styles from state
-                    style={{
-                        maxHeight: dropdownHeight ? `${dropdownHeight}px` : 0,
-                        opacity: menuOpen ? 1 : 0,
-                        transform: menuOpen ? "translateY(0)" : "translateY(-6px)",
-                    }}
+                    id="site-header"
+                    className="fixed top-0 left-0 right-0 z-50 py-1 flex justify-between items-center shadow-md bg-(--bg-color) transition duration-300 ease-in-out"
                 >
-                    <nav className="flex flex-col items-center justify-center p-4 space-y-5  text-lg">
-                        <button onClick={() => toggleMenu()} className="w-full">Home</button>
-                    </nav>
+                    {/* name */}
+                    <div className="py-3 md:py-4 pl-3 md:pl-15 text-2xl ">Portfolio</div>
+
+                    {/* hamburger icon */}
+                    {
+
+                        <button
+                            aria-label="Toggle menu"
+                            aria-expanded={menuOpen}
+                            onClick={() => setMenuOpen((s) => !s)}
+                            className={`md:hidden ${isPathMatch ? 'hidden' : ''} py-3 pr-3 w-12 h-12 flex items-center justify-center"
+                            type="button`}
+                        >
+                            {menuOpen ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="fill-(--text-color) hover:fill-white transition duration-300" height="34" viewBox="0 -960 960 960" width="34">
+                                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34" className="fill-(--text-color) hover:fill-white transition duration-300">
+                                    <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+                                </svg>
+                            )}
+                        </button>
+                    }
+
+                    {/* desktop menu */}
+
+
+                    {/* MOBILE DROPDOWN — animated with max-height + opacity */}
+                    <div
+                        ref={dropdownRef}
+                        className="md:hidden absolute left-0 right-0 top-full z-50 shadow-lg bg-(--bg-color) border-b rounded-b-4xl transition-all border-(--muted-text)  duration-300 overflow-hidden"
+                        // apply animated styles from state
+                        style={{
+                            maxHeight: dropdownHeight ? `${dropdownHeight}px` : 0,
+                            opacity: menuOpen ? 1 : 0,
+                            transform: menuOpen ? "translateY(0)" : "translateY(-6px)",
+                        }}
+                    >
+                        <nav className="flex flex-col items-center justify-center p-4 space-y-5  text-lg">
+                            <button onClick={() => toggleMenu()} className="w-full">Home</button>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

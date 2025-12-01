@@ -14,6 +14,7 @@ import Add_user from './admin/Add_user.jsx';
 import UserDashboard from './user/UserDashboard.jsx';
 function Router_page() {
     const location = useLocation();
+    console.log(location.pathname);
     const hideNavbarRoutes = [
         '/project-collections',
         '/project-details',
