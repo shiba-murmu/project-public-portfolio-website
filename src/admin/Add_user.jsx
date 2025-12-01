@@ -25,6 +25,7 @@ function Add_user() {
     }
 
     const Component2 = () => {
+        // Form for add the user to the website.
         return (
             <>
                 <div className='w-full flex flex-col justify-center items-center mt-10 gap-6'>
