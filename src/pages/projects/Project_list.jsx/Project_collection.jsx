@@ -22,14 +22,29 @@ function Project_collection() {
                 >
                     <span className='text-2xl md:text-5xl font-bold border-b-2 border-(--muted-text) '>Projects collection</span>
                 </div>
+                
                 <div className='md:hidden'>
-
                     {/* For mobile  */}
-                    <div data-aos="fade-up" data-aos-delay="180"><Project_card /></div>
-                    <div data-aos="fade-up" data-aos-delay="260"><Project_card /></div>
-                    <div data-aos="fade-up" data-aos-delay="340"><Project_card /></div>
-
+                    {projects.map((project, index) => (
+                        <div
+                            key={project.id}
+                            data-aos="fade-up"
+                            data-aos-delay={240 + index * 60}
+                        >
+                            <Project_card
+                                path={project.image}
+                                title={project.title}
+                                tech={project.tech.split(", ")}
+                                description={project.description}
+                                codelink={project.code}
+                                livelink={project.link}
+                                duration={project.duration}
+                                image={project.image}
+                            />
+                        </div>
+                    ))}
                 </div>
+
                 <div className='hidden md:flex md:flex-col md:gap-40 w-full py-10 '>
                     {/* Designed for desktop screen */}
                     {/* // image left (default) */}
@@ -50,13 +65,7 @@ function Project_collection() {
                             />
                         </div>
                     ))}
-
-
-                    
-
                     {/* // image right (reverse) */}
-                  
-
                 </div>
             </div>
         </>

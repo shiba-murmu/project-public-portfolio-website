@@ -7,7 +7,6 @@ export default function Project_card({
     image = 'https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322',
     tech = ['HTML', 'CSS', 'JavaScript'],
     description = 'A responsive hotel management UI with booking flow, admin dashboard and room management features.',
-    detailsLink = '/project-details',
     duration = '2 weeks',
     role  = 'All',
     codeLink = '#',

@@ -84,3 +84,39 @@ export const aboutData = {
     fact5: "Open to freelance & full-time work",
   },
 };
+
+
+
+export const educationDetails = [
+    {
+        id : 1,
+        course : 'Bachelor Of Technology',
+        branch : 'Computer Science And Engineering',
+        college : 'Maryland Institute Of Technology And Management',
+        CGPA : 5.6,
+        percentage : '50%',
+        address : 'Jharkhand, Jamshedpur'
+    },
+    {
+        id : 1,
+        course : 'Bachelor Of Technology',
+        branch : 'Computer Science And Engineering',
+        college : 'Maryland Institute Of Technology And Management',
+        CGPA : 5.6,
+        percentage : '50%',
+        address : 'Jharkhand, Jamshedpur'
+    },
+    {
+        id : 1,
+        course : 'Bachelor Of Technology',
+        branch : 'Computer Science And Engineering',
+        college : 'Maryland Institute Of Technology And Management',
+        CGPA : 5.6,
+        percentage : '50%',
+        address : 'Jharkhand, Jamshedpur'
+    },
+
+
+
+    
+]

@@ -1,5 +1,6 @@
 import React from 'react'
 import useAos from '../../hooks/useAos' // added AOS hook
+import { educationDetails } from '../../hooks/detailed_data'
 
 const Education = () => {
     // init AOS
@@ -7,7 +8,7 @@ const Education = () => {
 
     const data = [
         {
-            degree: "Bachelor of Technology",
+            degree: '',
             branch: "Computer Science and Engineering",
             institute: "Maryland Institute of Technology and management",
             location: "Jamshedpur, Jharkhand",
@@ -47,6 +48,9 @@ const Education = () => {
         return (
             <div className={`w-full flex flex-col md:flex-row items-stretch gap-6`} data-aos="fade-up" data-aos-delay="120">
                 {/* content block */}
+                {
+                    
+                }
                 <div className={`flex-1 flex ${contentOrder} ${align === 'left' ? 'justify-start' : 'justify-end'}`}>
                     <div className="bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 md:p-10 w-full max-w-2xl shadow-sm hover:shadow-md transition-shadow" data-aos="fade-right" data-aos-delay="180">
                         <div className="flex items-start justify-between gap-4">

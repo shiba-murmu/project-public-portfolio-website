@@ -2,7 +2,7 @@ import React from 'react'
 import Text from '../../components/customtext/Text'
 import { Link } from 'react-router-dom'
 import useAos from '../../hooks/useAos' // added AOS hook
-
+import { educationDetails } from '../../hooks/detailed_data'
 export default function Education_experience() {
     // initialize AOS
     useAos({ duration: 700, easing: 'ease-out', once: true }, [])
@@ -32,22 +32,6 @@ export default function Education_experience() {
             Time_period: '12/03/2023 to  12/04/2023',
             address: 'TATA'
         },
-        {
-            Company: 'Generix Info Tech',
-            Role: 'Web development',
-            Description: 'Full stack web development course',
-            tect_stack: ['html', 'css', 'php'],
-            Time_period: '12/03/2023 to  12/04/2023',
-            address: 'TATA'
-        },
-        {
-            Company: 'Generix Info Tech',
-            Role: 'Web development',
-            Description: 'Full stack web development course',
-            tect_stack: ['html', 'css', 'php', 'html', 'css', 'php', 'html', 'css', 'php'],
-            Time_period: '12/03/2023 to  12/04/2023',
-            address: 'TATA'
-        }
     ]
 
     // Small reusable chip
