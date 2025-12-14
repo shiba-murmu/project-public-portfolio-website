@@ -95,7 +95,7 @@ export const educationDetails = [
         branch : 'Computer Science And Engineering',
         college : 'Maryland Institute Of Technology And Management',
         CGPA : 7.03, // that should be string or number
-        percentage : '50%',
+        percentage : '66.79%',
         duration: '2021 - 2025',
         address : 'Jharkhand, Jamshedpur'
     },
