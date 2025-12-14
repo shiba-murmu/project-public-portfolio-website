@@ -31,7 +31,26 @@ export const projects = {
 };
 
 export const aboutData = {
-  description1: `I'm ${portfolioInfo.firstname} ${portfolioInfo.lastname}, a passionate Frontend Developer dedicated to crafting engaging and user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in building responsive and visually appealing websites that captivate users. I thrive on turning complex ideas into intuitive designs, ensuring seamless functionality across devices. My commitment to staying updated with the latest industry trends allows me to deliver innovative solutions that exceed client expectations. Let's collaborate to bring your digital visions to life!`,
-  description2: `Beyond coding, I enjoy exploring new technologies, contributing to open-source projects, and continuously enhancing my skills. When I'm not immersed in web development, you can find me indulging in photography, hiking, or experimenting with new recipes in the kitchen. These hobbies fuel my creativity and inspire me to think outside the box in my professional work. I'm always eager to connect with fellow developers and tech enthusiasts, so feel free to reach out!`,
-  description3: `I'm always looking for new challenges and opportunities to grow as a developer. Whether it's learning a new framework, working on a collaborative project, or finding innovative solutions to complex problems, I'm ready to take it on. Let's work together to create something amazing!`,
+  working_tech: {
+    tech1: "React",
+    tech2: "Tailwind CSS",
+    tech3: "Git",
+    tech4: "Firebase",
+  },
+  description1: ` — a frontend engineer who loves building clean, fast and intuitive web experiences. I started coding
+                                  during my B.Tech in Computer Science, and over time I found myself drawn toward creating polished user
+                                  interfaces and solving real user-experience problems.`,
+  description2: `and
+                                I’m always exploring tools that help create smoother and more human-friendly digital products. My focus is
+                                simple: build interfaces that are lightweight, responsive, and visually consistent — without unnecessary
+                                complexity.`,
+  description3: `  Outside coding, I love drawing, exploring design trends, listening to music, and experimenting with new
+                                ideas. I'm a fast learner, detail-oriented, and genuinely enjoy crafting things from scratch. Whether it's tackling a challenging project, collaborating with a team, or finding innovative solutions to complex problems, I'm ready to take it on. Let's work together to create something amazing!`,
+  quick_fact: {
+    fact1: "B.Tech in Computer Science",
+    fact2: "2+ years of experience",
+    fact3: "Passionate about UI/UX design",
+    fact4: "Based in India",
+    fact5: "Open to freelance & full-time work",
+  },
 };

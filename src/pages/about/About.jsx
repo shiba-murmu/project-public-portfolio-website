@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Text from '../../components/customtext/Text'
 import useAos from '../../hooks/useAos'
+import { aboutData } from '../../hooks/detailed_data'
 
 function About() {
     const [name, setName] = useState('No name')
@@ -61,20 +62,15 @@ function About() {
                                 <span className="font-extrabold text-md md:text-xl text-(--text-color)">
                                     {name} {lastName}
                                 </span>{' '}
-                                — a frontend engineer who loves building clean, fast and intuitive web experiences. I started coding
-                                during my B.Tech in Computer Science, and over time I found myself drawn toward creating polished user
-                                interfaces and solving real user-experience problems.
+                                {aboutData.description1}
                                 <br />
                                 <br />
                                 I enjoy working with{' '}
-                                <span className="font-extrabold text-md text-(--text-color)">React, Tailwind CSS, and Firebase</span>, and
-                                I’m always exploring tools that help create smoother and more human-friendly digital products. My focus is
-                                simple: build interfaces that are lightweight, responsive, and visually consistent — without unnecessary
-                                complexity.
+                                <span className="font-extrabold text-md text-(--text-color)">{aboutData.working_tech.tech1}, {aboutData.working_tech.tech2}, {aboutData.working_tech.tech3}, and {aboutData.working_tech.tech4}</span>, and
+                                {aboutData.description2}
                                 <br />
                                 <br />
-                                Outside coding, I love drawing, exploring design trends, listening to music, and experimenting with new
-                                ideas. I'm a fast learner, detail-oriented, and genuinely enjoy crafting things from scratch.
+                                {aboutData.description3}
                             </p>
 
                             <div
@@ -89,11 +85,11 @@ function About() {
                                 <div className="md:flex md:justify-center md:items-start">
                                     <ol className="text-(--muted-text) md:text-start list-inside space-y-1 text-md md:text-lg md:flex md:flex-col">
                                         {[
-                                            'B.Tech in Computer Science',
-                                            '2+ years of experience',
-                                            'Passionate about UI/UX design',
-                                            'Based in India',
-                                            'Open to freelance & full-time work',
+                                            aboutData.quick_fact.fact1,
+                                            aboutData.quick_fact.fact2,
+                                            aboutData.quick_fact.fact3,
+                                            aboutData.quick_fact.fact4,
+                                            aboutData.quick_fact.fact5,
                                         ].map((fact, i) => (
                                             <li
                                                 key={fact}
@@ -108,7 +104,7 @@ function About() {
 
                                     <div className="mt-4 md:mt-0 md:flex md:justify-center md:items-center" data-aos="zoom-in" data-aos-delay="520">
                                         <ul className="text-md md:text-md font-normal flex flex-wrap gap-3 ">
-                                            {['React', 'Tailwind CSS', 'Git', 'Firebase'].map((tech, i) => (
+                                            {[aboutData.working_tech.tech1, aboutData.working_tech.tech2, aboutData.working_tech.tech3, aboutData.working_tech.tech4].map((tech, i) => (
                                                 <li
                                                     key={tech}
                                                     className="px-3 border bg-(--button-background) text-(--button-text-color) rounded-full"
