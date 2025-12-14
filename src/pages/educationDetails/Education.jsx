@@ -6,41 +6,13 @@ const Education = () => {
     // init AOS
     useAos({ duration: 700, easing: 'ease-out', once: true }, [])
 
-    const data = [
-        {
-            degree: '',
-            branch: "Computer Science and Engineering",
-            institute: "Maryland Institute of Technology and management",
-            location: "Jamshedpur, Jharkhand",
-            duration: "2021 - 2025",
-            cgpa: "8.4",
-            percentage: "83%"
-        },
-        {
-            degree: "Intermediate +2",
-            branch: "Science",
-            institute: "Kendriya Vidyalaya No.1",
-            location: "Jamshedpur, Jharkhand",
-            duration: "2019 - 2020",
-            cgpa: "NILL",
-            percentage: "83%"
-        },
-        {
-            degree: "Matriculation",
-            branch: "NILL",
-            institute: "Kendriya Vidyalaya No.1",
-            location: "Jamshedpur, Jharkhand",
-            duration: "2009 - 2019",
-            cgpa: "NILL",
-            percentage: "83%"
-        }
-    ]
+
 
     const Badge = ({ children }) => (
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm bg-[rgba(255,255,255,0.03)] border border-(--border-color)">{children}</div>
     )
 
-    const EducationCard = ({ item, align = 'left' }) => {
+    const EducationCard = ({ align = 'left', course, branch, duration, college, CGPA, percentage, location }) => {
         // align -> 'left' or 'right' to alternate layout on large screens
         const contentOrder = align === 'left' ? 'md:order-1' : 'md:order-2'
         const timelineOrder = align === 'left' ? 'md:order-2' : 'md:order-1'
@@ -48,38 +20,36 @@ const Education = () => {
         return (
             <div className={`w-full flex flex-col md:flex-row items-stretch gap-6`} data-aos="fade-up" data-aos-delay="120">
                 {/* content block */}
-                {
-                    
-                }
+
                 <div className={`flex-1 flex ${contentOrder} ${align === 'left' ? 'justify-start' : 'justify-end'}`}>
                     <div className="bg-(--footer-background) border border-(--border-color) rounded-2xl p-6 md:p-10 w-full max-w-2xl shadow-sm hover:shadow-md transition-shadow" data-aos="fade-right" data-aos-delay="180">
                         <div className="flex items-start justify-between gap-4">
                             <div>
-                                <h3 className="text-xl md:text-2xl font-bold">{item.degree}</h3>
-                                <div className="mt-1 text-sm text-(--muted-text)">{item.branch}</div>
+                                <h3 className="text-xl md:text-2xl font-bold">{course}</h3>
+                                <div className="mt-1 text-sm text-(--muted-text)">{branch}</div>
                             </div>
-                            <div className="text-sm text-(--muted-text)">{item.duration}</div>
+                            <div className="text-sm text-(--muted-text)">{duration}</div>
                         </div>
 
-                        <p className="mt-4 text-md text-(--muted-text)">{item.institute}</p>
+                        <p className="mt-4 text-md text-(--muted-text)">{college}</p>
 
                         <div className="mt-4 flex flex-wrap gap-3 items-center">
                             <Badge>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
                                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
                                 </svg>
-                                <span className="text-sm">CGPA: {item.cgpa}</span>
+                                <span className="text-sm">CGPA: {CGPA}</span>
                             </Badge>
 
                             <Badge>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none">
                                     <path d="M12 2a10 10 0 100 20 10 10 0 000-20zM8 12l2 2 4-4" stroke="#6EE7B7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <span className="text-sm">Percentage: {item.percentage}</span>
+                                <span className="text-sm">Percentage: {percentage}</span>
                             </Badge>
 
                             <div className="ml-auto text-sm text-(--muted-text)">
-                                <span>{item.location}</span>
+                                <span>{location}</span>
                             </div>
                         </div>
                     </div>
@@ -116,9 +86,16 @@ const Education = () => {
                 </div>
 
                 <div className="flex flex-col gap-8">
-                    {data.map((item, idx) => (
-                        <div key={idx} className="">
-                            <EducationCard item={item} align={idx % 2 === 0 ? 'left' : 'end'} />
+                    {educationDetails.map((item, idx) => (
+                        <div key={item.id} className="">
+                            <EducationCard align={idx % 2 === 0 ? 'left' : 'end'}
+                                course={item.course}
+                                branch={item.branch}
+                                duration={item.duration}
+                                college={item.college}
+                                CGPA={item.CGPA}
+                                percentage={item.percentage}
+                                location={item.address} />
                         </div>
                     ))}
                 </div>

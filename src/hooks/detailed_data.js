@@ -88,35 +88,36 @@ export const aboutData = {
 
 
 export const educationDetails = [
+    // Only upto three card or may increase the number.
     {
         id : 1,
         course : 'Bachelor Of Technology',
         branch : 'Computer Science And Engineering',
         college : 'Maryland Institute Of Technology And Management',
-        CGPA : 5.6,
+        CGPA : 7.03, // that should be string or number
         percentage : '50%',
+        duration: '2021 - 2025',
         address : 'Jharkhand, Jamshedpur'
     },
     {
-        id : 1,
-        course : 'Bachelor Of Technology',
-        branch : 'Computer Science And Engineering',
-        college : 'Maryland Institute Of Technology And Management',
-        CGPA : 5.6,
-        percentage : '50%',
-        address : 'Jharkhand, Jamshedpur'
+        id : 2,
+        course : 'Intermediate',
+        branch : 'Science (PCM) - JAC Board',
+        college : 'Jamshedpur Womens College',
+        CGPA :  'NILL', // that should be string or number 
+        duration : '2021',
+        percentage : '64.6%',
+        address : 'Jamshedpur , Jharkhand'
     },
     {
-        id : 1,
-        course : 'Bachelor Of Technology',
-        branch : 'Computer Science And Engineering',
-        college : 'Maryland Institute Of Technology And Management',
-        CGPA : 5.6,
-        percentage : '50%',
-        address : 'Jharkhand, Jamshedpur'
+        id : 3,
+        course : 'Matriculation',
+        branch : 'Secondary education - JAC Board',
+        college : 'Pallimangal High School',
+        CGPA : 'NILL', // That should be string or number
+        percentage : '65.6%',
+        duration : '2018',
+        address : 'Jamshedpur , Jharkhand'
     },
-
-
-
     
 ]
