@@ -14,21 +14,51 @@ export const socialLinks = {
   github: "https://github.com/Bhawna200300",
 };
 
-export const projects = {
-  project1: {
-    title: "Portfolio Website",
+export const projects = [
+  {
+    id: 1,
+    title: "Career Lift System",
+    tech: "React, Django, Tailwind CSS",
     description:
-      "A personal portfolio website to showcase my projects and skills.",
-    code: "https://www.bhawnachoudhary.com",
-    link: "",
+      "Career Lift is my full-stack career guidance web app built with React and Django.",
+    code: "https://github.com/shiba-murmu/career-lift-system-project",
+    link : "https://career-lift-system.vercel.app/",
+    image : 'https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322'
   },
+  {
+    id: 2,
+    title: "Buy Me",
+    tech: "Html, CSS, JavaScript , Php , Bootstrap",
+    description:
+      "An online store built with HTML, CSS, JavaScript, PHP, and Bootstrap.",
+    code: "https://github.com/shiba-murmu/buyme-project",
+    link : "#",
+    image : 'https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322'
+  }
+];
+//   {
+//     id: 1,
+//     title: "Career Lift System",
+//     tech: "React, Django, Tailwind CSS",
+//     description:
+//       "Career Lift is my full-stack career guidance web app built with React and Django.",
+//     code: "https://github.com/shiba-murmu/career-lift-system-project",
+//     link: "https://career-lift-system.vercel.app/",
+//     image : ""
+//   },
 
-  projects2: {
-    title: "E-commerce Store",
-    description: "An online store built with React and Node.js.",
-    link: "https://www.myecommercestore.com",
-  },
-};
+//   {
+//     id: 2,
+//     title: "Buy Me",
+//     tech: "Html, CSS, JavaScript , Php , Bootstrap",
+//     description:
+//       "An online store built with HTML, CSS, JavaScript, PHP, and Bootstrap.",
+//     code: "https://github.com/shiba-murmu/buyme-project",
+//     link: "#",
+//     image: ""
+//   },
+
+
 
 export const aboutData = {
   working_tech: {

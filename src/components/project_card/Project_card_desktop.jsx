@@ -8,6 +8,8 @@ const Project_card_desktop = ({
     title = "Project Title",
     tech = ["HTML", "CSS", "JS"],
     description = "Project description goes here",
+    link ,
+    code ,
     reverse = false, // if true, image will be on the right on md+
 }) => {
     // initialize AOS
@@ -67,21 +69,21 @@ const Project_card_desktop = ({
                         </div>
                     </header>
 
-                    <main className="flex-grow">
+                    <main className="grow">
                         <p className="text-lg md:text-base text-(--muted-text) leading-relaxed">
                             {description}
                         </p>
                     </main>
 
                     <footer className="mt-6 flex gap-4">
-                        <Link to="/project-details" className="mt-auto">
+                        {/* <Link to="/project-details" className="mt-auto">
                             <button className="px-4 py-2 rounded-md bg-(--button-background) text-(--button-text-color) font-semibold hover:shadow-lg">
                                 Details
                             </button>
-                        </Link>
+                        </Link> */}
 
                         <a
-                            href="#"
+                            href={code}
                             className="mt-auto"
                         // replace href with your code url
                         >
@@ -91,7 +93,7 @@ const Project_card_desktop = ({
                         </a>
 
                         <a
-                            href="#"
+                            href={link}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-auto"

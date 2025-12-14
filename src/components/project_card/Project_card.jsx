@@ -8,6 +8,8 @@ export default function Project_card({
     tech = ['HTML', 'CSS', 'JavaScript'],
     description = 'A responsive hotel management UI with booking flow, admin dashboard and room management features.',
     detailsLink = '/project-details',
+    duration = '2 weeks',
+    role  = 'All',
     codeLink = '#',
     liveLink = '#',
 }) {
@@ -61,21 +63,21 @@ export default function Project_card({
 
                 {/* optional short meta row */}
                 <div className="flex items-center justify-between text-xs text-(--muted-text) mb-3">
-                    <div>Role: <span className="text-(--text-color) font-medium">Frontend</span></div>
-                    <div>Duration: <span className="text-(--text-color) font-medium">2 weeks</span></div>
+                    <div>Role: <span className="text-(--text-color) font-medium"></span>{role}</div>
+                    <div>Duration: <span className="text-(--text-color) font-medium">{duration}</span></div>
                 </div>
 
                 {/* action buttons - pinned to bottom */}
                 <div className="mt-auto flex gap-3" data-aos="fade-up" data-aos-delay="360">
-                    <Link to={detailsLink} className="flex-1">
+                    {/* <Link to={detailsLink} className="flex-1">
                         <button className="w-full px-4 py-2 rounded-md font-semibold bg-(--button-background) text-(--button-text-color)">Details</button>
-                    </Link>
+                    </Link> */}
 
                     <a href={codeLink} className="flex-1">
-                        <button className="w-full px-4 py-2 rounded-md border border-(--border-color) text-(--text-color)">Code</button>
+                        <button className="w-full px-4 py-2 rounded-md border border-(--border-color)  text-(--text-color)">Code</button>
                     </a>
 
-                    <a href={liveLink} target="_blank" rel="noreferrer" className="flex-1">
+                    <a href={liveLink} target="_blank" rel="noopener noreferrer" className="flex-1">
                         <button className="w-full px-4 py-2 rounded-md bg-[rgba(255,255,255,0.03)] text-(--text-color)">Live</button>
                     </a>
                 </div>
