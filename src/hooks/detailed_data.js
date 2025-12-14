@@ -92,7 +92,7 @@ export const educationDetails = [
     {
         id : 1,
         course : 'Bachelor Of Technology',
-        branch : 'Computer Science And Engineering',
+        branch : 'Computer Science And Engineering - JUT',
         college : 'Maryland Institute Of Technology And Management',
         CGPA : 7.03, // that should be string or number
         percentage : '66.79%',
