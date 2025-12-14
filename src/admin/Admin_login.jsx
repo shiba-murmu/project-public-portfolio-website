@@ -1,12 +1,40 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../firebase/auth";
+import { toast } from "react-toastify";
+import { getAuth } from "firebase/auth";
 
 function Admin_login() {
     const [showPassword, setShowPassword] = React.useState(false);
     const [isSelect, setIsSelect] = useState(true);
-    // true = User selected by default
-    console.log(isSelect);
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
     const navigate = useNavigate();
+    const auth = getAuth();
+    console.log('current user : ', auth.currentUser)
+
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        setError("");
+
+        try {
+            const result = await loginUser(email, password);
+            console.log("Login successful:", result); 
+            toast.success("Login successful!");
+            navigate('/admin-dashboard');
+            // Redirect based on user type after successful login
+        } catch (err) {
+            console.error("Login failed:", err);
+            setError("Invalid email or password.");
+            toast.error("Login failed. Please try again.");
+        }
+        // true = User selected by default
+    };
 
     const Redirect = () => {
         if (isSelect) {
@@ -14,8 +42,7 @@ function Admin_login() {
         } else {
             navigate('/admin-dashboard')
         }
-    }
-
+    };
 
 
     return (
@@ -98,7 +125,7 @@ function Admin_login() {
 
 
                     <div className="rounded-2xl border p-6 md:p-8" style={{ borderColor: "rgba(0,0,0,0.06)" }}>
-                        <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+                        <form className="flex flex-col gap-5" onSubmit={handleLogin}>
                             {/* Email */}
                             <div>
                                 <label htmlFor="email" className="block text-md md:text-lg mb-3">
@@ -108,6 +135,8 @@ function Admin_login() {
                                     id="email"
                                     name="email"
                                     type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     required
                                     className="w-full px-4 py-2 border rounded-lg input-focus"
                                     placeholder="you@example.com"
@@ -115,7 +144,16 @@ function Admin_login() {
                             </div>
 
                             {/* Password */}
-                            <div className="flex flex-col gap-3 relative">
+                            <div
+                                className={`
+      flex flex-col gap-3 relative 
+      transition-all duration-300 
+      ${isSelect
+                                        ? "opacity-0 -translate-y-3 pointer-events-none"
+                                        : "opacity-100 translate-y-0"
+                                    }
+    `}
+                            >
                                 <label htmlFor="password" className="block text-md md:text-lg font-medium">
                                     Password
                                 </label>
@@ -123,52 +161,59 @@ function Admin_login() {
                                 <input
                                     id="password"
                                     name="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     type={showPassword ? "text" : "password"}
                                     required
                                     className="w-full px-4 py-2 border rounded-lg input-focus pr-12"
                                     placeholder="••••••••"
                                 />
 
-                                {/* Toggle Button */}
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
                                     className="absolute cursor-pointer right-3 top-[47px] md:top-13 text-(--muted-text)"
                                 >
                                     {showPassword ? (
-                                        /* eye-off icon */
                                         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 7a5 5 0 0 1 5 5c0 1-.3 2-.8 2.8l-1.4-1.4c.3-.4.5-.9.5-1.4a3 3 0 1 0-3 3c.5 0 1-.2 1.4-.5l1.4 1.4A5 5 0 1 1 12 7zm9.7 5c-.8 1.9-2.1 3.6-3.7 4.8l1.4 1.4-1.4 1.4-3.3-3.3A7 7 0 0 1 5 12c.8-1.9 2.1-3.6 3.7-4.8L7.3 5.8 8.7 4.4l3.3 3.3A7 7 0 0 1 19 12c-.8 1.9-2.1 3.6-3.7 4.8l1.4 1.4 1.4-1.4L21.7 12z" />
+                                            <path d="..." />
                                         </svg>
                                     ) : (
-                                        /* eye icon */
                                         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 5c5 0 9.3 3.1 11 7-1.7 3.9-6 7-11 7S2.7 15.9 1 12c1.7-3.9 6-7 11-7m0 2C8.1 7 4.7 9.2 3.2 12c1.5 2.8 4.9 5 8.8 5s7.3-2.2 8.8-5c-1.5-2.8-4.9-5-8.8-5m0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z" />
+                                            <path d="..." />
                                         </svg>
                                     )}
                                 </button>
                             </div>
 
 
+
                             {/* Actions */}
-                            <div className="flex items-center justify-between text-sm">
+                            <div
+                                className={`
+      flex items-center justify-between text-sm 
+      transition-all duration-300
+      ${isSelect
+                                        ? "opacity-0 -translate-y-2 pointer-events-none"
+                                        : "opacity-100 translate-y-0"
+                                    }
+    `}
+                            >
                                 <label className="inline-flex items-center gap-2">
                                     <input type="checkbox" className="h-4 w-4" />
                                     <span>Remember me</span>
                                 </label>
-
+ 
                                 <a href="#" className="text-sm underline" onClick={(e) => e.preventDefault()}>
                                     Forgot password?
                                 </a>
                             </div>
 
+
                             {/* Submit — uses your button CSS vars for color */
               /* we keep color usage to CSS variables only (no hardcoded hex) */}
                             <button
                                 type="submit"
-                                onClick={() => {
-                                    Redirect();
-                                }}
                                 className="mt-4 w-full py-3 rounded-2xl font-semibold cursor-pointer"
                                 style={{
                                     backgroundColor: "var(--button-background)",
@@ -177,6 +222,7 @@ function Admin_login() {
                             >
                                 Login
                             </button>
+                            {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
 
                             {/* small helper text */}
                             <p className="mt-3 text-center text-sm md:text-md text-(--muted-text)">

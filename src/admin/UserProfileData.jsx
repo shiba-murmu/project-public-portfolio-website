@@ -21,7 +21,7 @@ function UserProfileData() {
                     </thead>
 
                     <tbody>
-                        <tr class="border-b">
+                        <tr className="border-b">
                             <td className="p-3">1</td>
                             <td className="p-3">Shiba Murmu</td>
                             <td className="p-3">/admin/profile</td>
@@ -35,7 +35,7 @@ function UserProfileData() {
                                 </button>
                             </td>
                         </tr>
-                        <tr class="border-b">
+                        <tr className="border-b">
                             <td className="p-3">2</td>
                             <td className="p-3">asdkfnaskdnfk9q3485</td>
                             <td className="p-3">Alice</td>

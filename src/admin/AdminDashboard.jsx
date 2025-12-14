@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import UserProfileData from "./UserProfileData";
 import UserAboutMeData from "./UserAboutMeData";
 import UserMyWorkData from "./UserMyWorkData";
@@ -7,7 +7,9 @@ import UserTechnicalSkillData from "./UserTechnicalSkillData";
 import UserExperienceData from "./UserExperienceData";
 import UserEducationData from "./UserEducationData";
 import FooterData from "./FooterData";
-
+import { logoutUser } from "../firebase/auth";
+import { toast } from "react-toastify";
+import { getAuth } from "firebase/auth";
 function UserProject() {
     <>
         <div>
@@ -20,43 +22,43 @@ function AdminList() {
     return (
         <>
             <span className="text-2xl text-(--muted-text)">Admin : 2</span>
-            <div class="overflow-x-auto">
-                <table class="w-full border-collapse text-left text-xs">
-                    <thead class="bg-gray-100 text-gray-700">
+            <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-left text-xs">
+                    <thead className="bg-gray-100 text-gray-700">
                         <tr>
 
-                            <th class="p-3 font-semibold">S.NO</th>
-                            <th class="p-3 font-semibold">ID</th>
-                            <th class="p-3 font-semibold">Name</th>
-                            <th class="p-3 font-semibold">Email</th>
-                            <th class="p-3 font-semibold">Role</th>
-                            <th class="p-3 font-semibold">Actions</th>
-                            <th class="p-3 font-semibold"></th>
+                            <th className="p-3 font-semibold">S.NO</th>
+                            <th className="p-3 font-semibold">ID</th>
+                            <th className="p-3 font-semibold">Name</th>
+                            <th className="p-3 font-semibold">Email</th>
+                            <th className="p-3 font-semibold">Role</th>
+                            <th className="p-3 font-semibold">Actions</th>
+                            <th className="p-3 font-semibold"></th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">1</td>
-                            <td class="p-3">alskdflasdf3242</td>
-                            <td class="p-3">John Doe</td>
-                            <td class="p-3">john@example.com</td>
-                            <td class="p-3">Admin</td>
-                            <td class="p-3">Edit</td>
-                            <td class="p-3">
+                        <tr className="border-b">
+                            <td className="p-3">1</td>
+                            <td className="p-3">alskdflasdf3242</td>
+                            <td className="p-3">John Doe</td>
+                            <td className="p-3">john@example.com</td>
+                            <td className="p-3">Admin</td>
+                            <td className="p-3">Edit</td>
+                            <td className="p-3">
                                 <button className="bg-amber-500 py-2 px-3 rounded text-xs cursor-pointer">
                                     Remove
                                 </button>
                             </td>
                         </tr>
-                        <tr class="border-b">
-                            <td class="p-3">2</td>
-                            <td class="p-3">asdkfnaskdnfk9q3485</td>
-                            <td class="p-3">Alice</td>
-                            <td class="p-3">alice@example.com</td>
-                            <td class="p-3">Admin</td>
-                            <td class="p-3">Edit</td>
-                            <td class="p-3">
+                        <tr className="border-b">
+                            <td className="p-3">2</td>
+                            <td className="p-3">asdkfnaskdnfk9q3485</td>
+                            <td className="p-3">Alice</td>
+                            <td className="p-3">alice@example.com</td>
+                            <td className="p-3">Admin</td>
+                            <td className="p-3">Edit</td>
+                            <td className="p-3">
                                 <button className="bg-amber-500 py-2 px-3 rounded text-xs cursor-pointer">
                                     Remove
                                 </button>
@@ -72,45 +74,45 @@ function UserList() {
     return (
         <>
             <span className="text-2xl text-(--muted-text)">Users : 2</span>
-            <div class="overflow-x-auto">
-                <table class="w-full border-collapse text-left text-xs">
-                    <thead class="bg-gray-100 text-gray-700">
+            <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-left text-xs">
+                    <thead className="bg-gray-100 text-gray-700">
                         <tr>
-                            <th class="p-3 font-semibold">S.NO</th>
-                            <th class="p-3 font-semibold">ID</th>
-                            <th class="p-3 font-semibold">Name</th>
-                            <th class="p-3 font-semibold">Email</th>
-                            <th class="p-3 font-semibold">Password</th>
-                            <th class="p-3 font-semibold">Date</th>
-                            <th class="p-3 font-semibold">Role</th>
-                            <th class="p-3 font-semibold"></th>
+                            <th className="p-3 font-semibold">S.NO</th>
+                            <th className="p-3 font-semibold">ID</th>
+                            <th className="p-3 font-semibold">Name</th>
+                            <th className="p-3 font-semibold">Email</th>
+                            <th className="p-3 font-semibold">Password</th>
+                            <th className="p-3 font-semibold">Date</th>
+                            <th className="p-3 font-semibold">Role</th>
+                            <th className="p-3 font-semibold"></th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr class="border-b">
-                            <td class="p-3">1</td>
-                            <td class="p-3">alskdflasdf3242</td>
-                            <td class="p-3">John Doe</td>
-                            <td class="p-3">john@example.com</td>
-                            <td class="p-3">alskdflasdf3242</td>
-                            <td class="p-3">12/02/2023</td>
-                            <td class="p-3">User</td>
-                            <td class="p-3">
+                        <tr className="border-b">
+                            <td className="p-3">1</td>
+                            <td className="p-3">alskdflasdf3242</td>
+                            <td className="p-3">John Doe</td>
+                            <td className="p-3">john@example.com</td>
+                            <td className="p-3">alskdflasdf3242</td>
+                            <td className="p-3">12/02/2023</td>
+                            <td className="p-3">User</td>
+                            <td className="p-3">
                                 <button className="bg-amber-500 py-2 px-3 rounded text-xs cursor-pointer">
                                     Remove
                                 </button>
                             </td>
                         </tr>
-                        <tr class="border-b">
-                            <td class="p-3">2</td>
-                            <td class="p-3">asdkfnaskdnfk9q3485</td>
-                            <td class="p-3">Alice</td>
-                            <td class="p-3">alice@example.com</td>
-                            <td class="p-3">alskdflasdf3242</td>
-                            <td class="p-3">12/02/2023</td>
-                            <td class="p-3">User</td>
-                            <td class="p-3">
+                        <tr className="border-b">
+                            <td className="p-3">2</td>
+                            <td className="p-3">asdkfnaskdnfk9q3485</td>
+                            <td className="p-3">Alice</td>
+                            <td className="p-3">alice@example.com</td>
+                            <td className="p-3">alskdflasdf3242</td>
+                            <td className="p-3">12/02/2023</td>
+                            <td className="p-3">User</td>
+                            <td className="p-3">
                                 <button className="bg-amber-500 py-2 px-3 rounded text-xs cursor-pointer">
                                     Remove
                                 </button>
@@ -136,7 +138,8 @@ function Profile() {
 
 function AdminFirstOverview() {
     // admin header card and main area....
-
+    const auth = getAuth();
+    console.log('current admin user : ', auth.currentUser)
     return (
         <>
             <header className="bg-(--card-background,transparent)/60 backdrop-blur-sm rounded-2xl px-4 py-6 md:px-8 md:py-8 shadow-soft">
@@ -276,6 +279,20 @@ function AdminFirstOverview() {
 }
 
 export default function AdminDashboard() {
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            await logoutUser();
+            localStorage.clear()
+            console.log('Admin logged out')
+            toast.info('Admin logged out')
+            navigate('/admin-and-users');
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     return (
         <div className="min-h-screen bg-(--bg-color) flex justify-start flex-col items-center">
             <div className="w-full max-w-4xl mx-auto">
@@ -317,6 +334,7 @@ export default function AdminDashboard() {
                     <section className="w-full">
                         <FooterData />
                     </section>
+                    <button onClick={handleLogout}>Logout</button>
                 </div>
             </div>
         </div>
