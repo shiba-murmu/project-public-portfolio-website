@@ -33,8 +33,8 @@ function Project() {
                                 title={project.title}
                                 tech={project.tech.split(", ")}
                                 description={project.description}
-                                codelink={project.code}
-                                livelink={project.link}
+                                codeLink={project.code}
+                                liveLink={project.link}
                                 duration={project.duration}
                                 image={project.image}
                             />
