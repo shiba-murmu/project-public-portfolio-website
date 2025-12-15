@@ -6,7 +6,7 @@ export const portfolioInfo = {
   title: "Web Developer",
   birthday: "1998-05-15",
   email: "bhawnachoudhary897@gmail.com",
-  resume: "../assets/documents/resume.pdf",
+  resume: "/resume.pdf",
 };
 
 export const socialLinks = {
