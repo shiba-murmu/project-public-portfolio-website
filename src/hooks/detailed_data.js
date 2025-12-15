@@ -22,8 +22,9 @@ export const projects = [
     description:
       "Career Lift is my full-stack career guidance web app built with React and Django.",
     code: "https://github.com/shiba-murmu/career-lift-system-project",
-    link : "https://career-lift-system.vercel.app/",
-    image : 'https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322'
+    link: "https://career-lift-system.vercel.app/",
+    image:
+      "https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322",
   },
   {
     id: 2,
@@ -32,9 +33,10 @@ export const projects = [
     description:
       "An online store built with HTML, CSS, JavaScript, PHP, and Bootstrap.",
     code: "https://github.com/shiba-murmu/buyme-project",
-    link : "#",
-    image : 'https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322'
-  }
+    link: "#",
+    image:
+      "https://projectsly.com/images/blog/best-project-design.png?v=1686553999071005322",
+  },
 ];
 //   {
 //     id: 1,
@@ -57,8 +59,6 @@ export const projects = [
 //     link: "#",
 //     image: ""
 //   },
-
-
 
 export const aboutData = {
   working_tech: {
@@ -85,39 +85,57 @@ export const aboutData = {
   },
 };
 
-
-
 export const educationDetails = [
-    // Only upto three card or may increase the number.
-    {
-        id : 1,
-        course : 'Bachelor Of Technology',
-        branch : 'Computer Science And Engineering - JUT',
-        college : 'Maryland Institute Of Technology And Management',
-        CGPA : 7.03, // that should be string or number
-        percentage : '66.79%',
-        duration: '2021 - 2025',
-        address : 'Jharkhand, Jamshedpur'
-    },
-    {
-        id : 2,
-        course : 'Intermediate',
-        branch : 'Science (PCM) - JAC Board',
-        college : 'Jamshedpur Womens College',
-        CGPA :  'NILL', // that should be string or number 
-        duration : '2021',
-        percentage : '64.6%',
-        address : 'Jamshedpur , Jharkhand'
-    },
-    {
-        id : 3,
-        course : 'Matriculation',
-        branch : 'Secondary education - JAC Board',
-        college : 'Pallimangal High School',
-        CGPA : 'NILL', // That should be string or number
-        percentage : '65.6%',
-        duration : '2018',
-        address : 'Jamshedpur , Jharkhand'
-    },
-    
-]
+  // Only upto three card or may increase the number.
+  {
+    id: 1,
+    course: "Bachelor Of Technology",
+    branch: "Computer Science And Engineering - JUT",
+    college: "Maryland Institute Of Technology And Management",
+    CGPA: 7.03, // that should be string or number
+    percentage: "66.79%",
+    duration: "2021 - 2025",
+    address: "Jharkhand, Jamshedpur",
+  },
+  {
+    id: 2,
+    course: "Intermediate",
+    branch: "Science (PCM) - JAC Board",
+    college: "Jamshedpur Womens College",
+    CGPA: "NILL", // that should be string or number
+    duration: "2021",
+    percentage: "64.6%",
+    address: "Jamshedpur , Jharkhand",
+  },
+  {
+    id: 3,
+    course: "Matriculation",
+    branch: "Secondary Education - JAC Board",
+    college: "Pallimangal High School",
+    CGPA: "NILL", // That should be string or number
+    percentage: "65.6%",
+    duration: "2018",
+    address: "Shantipur , Jharkhand",
+  },
+];
+
+export const workExperience = [
+  {
+    id: 1,
+    title: "Web Development",
+    institute: "Generix Info Tech",
+    description: "web development course done in php mysql html css javascript",
+    tech_stack: ["Html, CSS ,javascript, Bootstrap, Php, Mysql"],
+    timeperiod: "12/12/2002 to 14/05/2005",
+  },
+  {
+    id: 2,
+    title: "Web Development",
+    institute: "Naresh Technologies",
+    description: "Full stack web development course done",
+    tech_stack: ["Html, CSS, Java, Javascript"],
+    timeperiod: "Dec 2024 to May 2025",
+  },
+  //    If any more experience add here
+  // then simply add the same content below
+];
