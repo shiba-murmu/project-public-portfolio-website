@@ -126,7 +126,7 @@ export const workExperience = [
     institute: "Generix Info Tech",
     description: "web development course done in php mysql html css javascript",
     tech_stack: ["Html, CSS ,javascript, Bootstrap, Php, Mysql"],
-    timeperiod: "12/12/2002 to 14/05/2005",
+    timeperiod: "May 2024 to July 2024",
   },
   {
     id: 2,
