@@ -3,7 +3,7 @@ import { resume } from "react-dom/server";
 export const portfolioInfo = {
   firstname: "Bhawna",
   lastname: "Choudhary",
-  title: "Frontend Developer",
+  title: "Web Developer",
   birthday: "1998-05-15",
   email: "bhawnachoudhary897@gmail.com",
   resume: "../assets/documents/resume.pdf",
