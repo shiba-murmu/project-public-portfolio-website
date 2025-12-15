@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Project_collection from './Project_list.jsx/Project_collection'
 import Project_card from '../../components/project_card/Project_card'
 import Text from '../../components/customtext/Text'
+import { projects } from '../../hooks/detailed_data'
 function Project() {
     return (
         <>
@@ -21,9 +22,25 @@ function Project() {
 
                 <div className='md:hidden w-full flex flex-col md:flex-row justify-center items-center'>
                     {/* Mobile device project cards */}
-                    <Project_card />
-                    <Project_card />
-                    <Project_card />
+                    {projects.map((project, index) => (
+                        <div
+                            key={project.id}
+                            data-aos="fade-up"
+                            data-aos-delay={240 + index * 60}
+                        >
+                            <Project_card
+                                path={project.image}
+                                title={project.title}
+                                tech={project.tech.split(", ")}
+                                description={project.description}
+                                codelink={project.code}
+                                livelink={project.link}
+                                duration={project.duration}
+                                image={project.image}
+                            />
+                        </div>
+                    ))}
+                
                     <Link to={'/project-collections'}>
                         <div className='md:hidden  px-10 py-3 flex justify-center items-center space-x-4 cursor-pointer bg-(--button-background) text-2xl font-medium  shadow-md rounded-md mt-10 text-(--button-text-color)'>
                             <span className='text-xl'>More</span>
